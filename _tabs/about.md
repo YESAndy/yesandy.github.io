@@ -5,7 +5,7 @@ order: 4
 title: "Weijia Cai"
 date: 2023-04-01
 summary: "Work hard, play hard"
-layout: about
+
 ---
 
 > Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
