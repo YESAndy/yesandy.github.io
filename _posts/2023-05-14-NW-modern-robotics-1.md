@@ -1,5 +1,5 @@
 ---
-title: Game-theory-two-player-zero-sum
+title: Game theory-two player zero-sum game
 author: andy
 date: 2023-05-14 11:33:00 +0800
 categories: [Blogging, Demo]
