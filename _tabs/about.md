@@ -3,8 +3,9 @@
 icon: fas fa-info-circle
 order: 4
 title: "Weijia Cai"
-date: 2023-04-01
-summary: "Work hard, play hard"
+date: YYYY-MM-DD HH:MM:SS +/-TTTT
+categories: [TOP_CATEGORIE, SUB_CATEGORIE]
+tags: [TAG]     # TAG names should always be lowercase
 
 ---
 
