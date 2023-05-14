@@ -10,5 +10,5 @@ mermaid: true
 
 ---
 
-#Note
+## Note
 This is the first of the note series for learning introduction to game theory
