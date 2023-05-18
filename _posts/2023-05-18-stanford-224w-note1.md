@@ -23,6 +23,7 @@ It is beneficial to predict by explicitly modeling relationships.
 ### 1.2 Instead of feature engineering, 
 
 However, it is also hard to learn from such structure, because:
+
 1. topology-structured data like images and text, networks can have arbitary size and complex topological structure.
 2. no fixed node ordering
 3. often dynamic and have **multimodal features**
