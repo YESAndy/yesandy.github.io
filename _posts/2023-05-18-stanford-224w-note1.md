@@ -16,4 +16,7 @@ layout: post
 
 ### 1.1 Graph structure naturally exists in many data
 ![Desktop View](/assets/img/post/2023-05-18-data-as-graphs-eg.png){: width="972" height="589" }
-_Data examples that can be represented as graph_
+_Data examples that can be represented as graph (from lecture 1.1 slide p6)_
+
+It is beneficial to predict by explicitly modeling relationships.
+
