@@ -6,3 +6,11 @@ tags: [course]     # TAG names should always be lowercase
 layout: post
 ---
 
+## Content
+1. Why Graph in ML?
+2. Classic Graph ML tasks
+3. Choice of representations
+4. Traditional feature engineering
+
+<h2 data-toc-skip>Why Graph in ML</h2>
+
