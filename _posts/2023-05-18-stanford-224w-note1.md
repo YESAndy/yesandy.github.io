@@ -20,7 +20,12 @@ _Data examples that can be represented as graph (from lecture 1.1 slide p6)_
 
 It is beneficial to predict by explicitly modeling relationships.
 
-### 1.2 Instead of feature engineering, 
+### 1.2 Use Deep Neural Network instead of feature engineering
+With the advances in DL, we can input graph structure data into a end-to-end model that automatically learn and extracts useful features for graph ML tasks.
+
+Therefore, a significant focus of graph learning is representation learning.
+
+### 1.3 Hard to learn from graph
 
 However, it is also hard to learn from such structure, because:
 
