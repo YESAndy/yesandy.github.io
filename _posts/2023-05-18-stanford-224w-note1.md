@@ -20,3 +20,7 @@ _Data examples that can be represented as graph (from lecture 1.1 slide p6)_
 
 It is beneficial to predict by explicitly modeling relationships.
 
+However, it is also hard to learn from such structure, because:
+1. topology-structured data like images and text, networks can have arbitary size and complex topological structure.
+2. no fixed node ordering
+3. often dynamic and have multimodal features
