@@ -95,6 +95,10 @@ graph structure
 choices of what to represent nodes and edges are important given a specific domain
 
 #### 3.1 types of graphs
+
+![Desktop View](/assets/img/post/2023-05-18-dg-vs-udg.png){: width="640" height="320" }
+_undirected graph vs directed graph (from lecture 1.3 slide)_
+
 - undirected: edges are undirected
   + node degree: the number of edges adjacent to node i as $k_i$
   + average degree: $\bar{k} = \frac{1}{N} \sum_{k_i} - \frac{2E}{N}$
@@ -106,7 +110,9 @@ choices of what to represent nodes and edges are important given a specific doma
 
 - graph representation
   + adjacency matrix
-  
+ 
+  ![Desktop View](/assets/img/post/2023-05-18-adjacency-matrix.png){: width="640" height="320" }
+_adjacency matrix (from lecture 1.3 slide)_
 
 
 
