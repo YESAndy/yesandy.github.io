@@ -96,9 +96,17 @@ choices of what to represent nodes and edges are important given a specific doma
 
 #### 3.1 types of graphs
 - undirected: edges are undirected
+  + node degree: the number of edges adjacent to node i as $k_i$
+  + average degree: $\bar{k} = \frac{1}{N} \sum_{k_i} - \frac{2E}{N}$
+  + example: Bipartite graph
+    * user/item
 - directed: edges are directed
+  + in degree: the number of in edges adjacent to node i
+  + out degree: the number of out edges adjacent to node i
 
-
+- graph representation
+  + adjacency matrix
+  
 
 
 
