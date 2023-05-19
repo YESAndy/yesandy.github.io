@@ -39,7 +39,7 @@ However, it is also hard to learn from such structure, because:
 
 ### 2. Classic graph ML tasks
 
-![Desktop View](/assets/img/post/2023-05-18-task-types.png){: width="972" height="589" }
+![Desktop View](/assets/img/post/2023-05-18-task-types.png){: width="640" height="480" }
 _Different tasks(from lecture 1.1 slide)_
 
 #### 2.1 graph level
