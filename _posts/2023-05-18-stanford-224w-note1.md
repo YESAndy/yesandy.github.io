@@ -101,7 +101,7 @@ _undirected graph vs directed graph (from lecture 1.3 slide)_
 
 - undirected graph (UG): edges are undirected
   + node degree: the number of edges adjacent to node i as $k_i$
-  + average degree: $\bar{k} = \frac{1}{N} \sum_{k_i} - \frac{2E}{N}$
+  + average degree: $\bar{k} = \frac{1}{N} \sum {k_i} = \frac{2E}{N}$
   + example: Bipartite graph
     * user/item
 - directed graph (DG): edges are directed
