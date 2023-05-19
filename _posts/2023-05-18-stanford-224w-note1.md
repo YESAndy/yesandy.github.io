@@ -96,7 +96,7 @@ choices of what to represent nodes and edges are important given a specific doma
 
 #### 3.1 types of graphs
 
-![Desktop View](/assets/img/post/2023-05-18-dg-vs-udg.png){: width="640" height="320" }
+![Desktop View](/assets/img/post/2023-05-18-dg-vs-udg.png){: width="480" height="280" }
 _undirected graph vs directed graph (from lecture 1.3 slide)_
 
 - undirected graph (UG): edges are undirected
