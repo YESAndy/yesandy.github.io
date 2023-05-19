@@ -28,6 +28,9 @@ Therefore, a significant focus of graph learning is **representation learning**.
 
 #### 1.3 Hard to learn from graph
 
+![Desktop View](/assets/img/post/2023-05-18-data-structure-compare.png){: width="640" height="320" }
+_Different data structures (from lecture 1.1 slide)_
+
 However, it is also hard to learn from such structure, because:
 
 1. topology-structured data like images and text, networks can have arbitary size and complex topological structure.
@@ -35,6 +38,9 @@ However, it is also hard to learn from such structure, because:
 3. often dynamic and have **multimodal features**
 
 ### 2. Classic graph ML tasks
+
+![Desktop View](/assets/img/post/2023-05-18-task-type.png){: width="972" height="589" }
+_Different tasks(from lecture 1.1 slide)_
 
 #### 2.1 graph level
 
