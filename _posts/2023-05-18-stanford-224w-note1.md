@@ -60,7 +60,8 @@ _Different tasks(from lecture 1.1 slide)_
     * nodes: particles
     * edges: interaction between particles
     * solutions1: generate proximity graphs, pass messagess, extract dynamics info
-
+![Desktop View](/assets/img/post/2023-05-18-graph-evolution-example.png){: width="640" height="480" }
+_Learning to Simulate Complex Physics with Graph Networks <https://arxiv.org/pdf/2002.09405.pdf>_
 
 
 #### 2.2 node level
@@ -87,6 +88,16 @@ categorize users/items
     * edges: user-item interactions
     * task: recommend related pins to users
     * solution1: to learn node embeddins $z_i$ such that: $ d(z_{cake1},z_{cake2}) < d(z_{cake1},z_{sweater}) $, indicating that related items have smaller "distance" between each other.
+
+### 3. Choices of representation
+graph structure
+
+choices of what to represent nodes and edges are important given a specific domain
+
+#### 3.1 types of graphs
+- undirected: edges are undirected
+- directed: edges are directed
+
 
 
 
