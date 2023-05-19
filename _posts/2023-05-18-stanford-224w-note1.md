@@ -99,24 +99,37 @@ choices of what to represent nodes and edges are important given a specific doma
 ![Desktop View](/assets/img/post/2023-05-18-dg-vs-udg.png){: width="640" height="320" }
 _undirected graph vs directed graph (from lecture 1.3 slide)_
 
-- undirected: edges are undirected
+- undirected graph (UG): edges are undirected
   + node degree: the number of edges adjacent to node i as $k_i$
   + average degree: $\bar{k} = \frac{1}{N} \sum_{k_i} - \frac{2E}{N}$
   + example: Bipartite graph
     * user/item
-- directed: edges are directed
+- directed graph (DG): edges are directed
   + in degree: the number of in edges adjacent to node i
   + out degree: the number of out edges adjacent to node i
 
 - graph representation
-  + adjacency matrix
+  + **adjacency matrix**
+    * symetric for UG
+    * may assymetric for DG
+    * ARE SPARCE MATRICES
+    * can change the binary value to 
+  + edge list
+    * (1,2), (3,2), ...
+    * inefficient
+  + adjacency list
+    * 1:, 2:3,4, ...
+    * easier if network is large and sparce
  
-  ![Desktop View](/assets/img/post/2023-05-18-adjacency-matrix.png){: width="640" height="320" }
+  ![Desktop View](/assets/img/post/2023-05-18-adjacency-matrix.png){: width="424" height="320" }
 _adjacency matrix (from lecture 1.3 slide)_
 
+- node and edge attributes/representation
+  + hand-crafted attributes
+  + neural-based features
 
-
-
+- graph connectivity of UG
+  + 
 
 
 
