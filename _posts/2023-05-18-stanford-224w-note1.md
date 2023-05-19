@@ -4,6 +4,7 @@ date: 2023-05-18 13:13:00 +/-0080
 categories: [note]
 tags: [course]     # TAG names should always be lowercase
 math: true
+toc: true
 layout: post
 ---
 
@@ -43,17 +44,31 @@ However, it is also hard to learn from such structure, because:
 _Different tasks(from lecture 1.1 slide)_
 
 #### 2.1 graph level
+**graph classification**: categorize different graphs
 
+example: molecule property prediction
+
+**graph generalization**
+example: drug discovery
+
+**graph evolution**
+example: physical simulation
 
 #### 2.2 node level
-
+**node classification**: predict a proterty of a node
+categorize users/items
 
 
 #### 2.3 subgraph level
-
+**clustering**: detect if nodes form a community
+social circle detection
 
 
 #### 2.4 edge level
+**link prediction**: predict whether there are missing links between two nodes
+example: knowledge graph completion
+
+
 
 
 
