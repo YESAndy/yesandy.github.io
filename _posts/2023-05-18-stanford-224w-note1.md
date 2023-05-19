@@ -1,5 +1,5 @@
 ---
-title: CS224W--Graph ML introduction and feature engineering
+title: CS224W--Graph ML introduction
 date: 2023-05-18 13:13:00 +/-0080
 categories: [note]
 tags: [cs224w]     # TAG names should always be lowercase
