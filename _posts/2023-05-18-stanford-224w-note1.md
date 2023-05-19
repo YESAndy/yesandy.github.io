@@ -46,7 +46,6 @@ _Different tasks(from lecture 1.1 slide)_
 #### 2.1 graph level
 - **graph classification**: categorize different graphs
   + example: molecule property prediction
-    * Paragraph
 - **graph generalization**
   + example: drug discovery
 - **graph evolution**
