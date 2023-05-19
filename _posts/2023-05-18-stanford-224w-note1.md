@@ -46,10 +46,20 @@ _Different tasks(from lecture 1.1 slide)_
 #### 2.1 graph level
 - **graph classification**: categorize different graphs
   + example: molecule property prediction
-- **graph generalization**
+- **graph generation**
   + example: drug discovery
+    * problems: antibiiotics are small molecular graphs
+    * tasks: input drug property, output posssible molecules
+    * nodes: atoms
+    * edges: chemical bonds
+    * solution1: GNN predict promising molecules from a pool of candidates
 - **graph evolution**
   + example: physical simulation
+    * problems: physical simulation as graphs
+    * tasks: predict material behaviors
+    * nodes: particles
+    * edges: interaction between particles
+    * solutions1: generate proximity graphs, pass messagess, extract dynamics info
 
 
 
@@ -59,14 +69,19 @@ categorize users/items
 
 
 #### 2.3 subgraph level
-**clustering**: detect if nodes form a community
-social circle detection
+- **clustering**: detect if nodes form a community
+  + example1: social circle detection
+  + example2: traffic prediction
+    * problem: road network as graph
+    * nodes: road segments
+    * edges: conectivity between road segments
+    * solution1: 
 
 
 #### 2.4 edge level
 - **link prediction**: predict whether there are missing links between two nodes
-  + example: knowledge graph completion
-  + example2: recommendation systems
+  + example1: knowledge graph completion
+  + example2: **recommendation systems**
     * problem setting: users interact with items
     * nodes: users and items
     * edges: user-item interactions
