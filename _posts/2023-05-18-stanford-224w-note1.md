@@ -65,19 +65,17 @@ social circle detection
 
 
 #### 2.4 edge level
-**link prediction**: predict whether there are missing links between two nodes
-example: knowledge graph completion
+- **link prediction**: predict whether there are missing links between two nodes
+  + example: knowledge graph completion
+  + example2: recommendation systems
+    * problem setting: users interact with items
+    * nodes: users and items
+    * edges: user-item interactions
+    * task: recommend related pins to users
+    * solution1: to learn node embeddins $z_i$ such that: $ d(z_{cake1},z_{cake2}) < d(z_{cake1},z_{sweater}) $, indicating that related items have smaller "distance" between each other.
 
-example2: recommendation systems
-users interact with items
-nodes: users and items
-edges: user-item interactions
-task: recommend related pins to users
 
-solution1:
-to learn node embeddins $z_i$ such that:
 
-$$ d(z_{cake1},z_{cake2}) < d(z_{cake1},z_{sweater}) $$, indicating that related items have smaller "distance" between each other.
 
 
 
