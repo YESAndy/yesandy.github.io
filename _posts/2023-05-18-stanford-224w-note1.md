@@ -12,7 +12,6 @@ layout: post
 1. Why Graph in ML?
 2. Classic Graph ML tasks
 3. Choice of representations
-4. Traditional feature engineering
 
 ### 1. Why Graph in ML?
 
