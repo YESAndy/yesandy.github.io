@@ -44,15 +44,15 @@ However, it is also hard to learn from such structure, because:
 _Different tasks(from lecture 1.1 slide)_
 
 #### 2.1 graph level
-**graph classification**: categorize different graphs
+- **graph classification**: categorize different graphs
+  + example: molecule property prediction
+    * Paragraph
+- **graph generalization**
+  + example: drug discovery
+- **graph evolution**
+  + example: physical simulation
 
-example: molecule property prediction
 
-**graph generalization**
-example: drug discovery
-
-**graph evolution**
-example: physical simulation
 
 #### 2.2 node level
 **node classification**: predict a proterty of a node
@@ -67,6 +67,17 @@ social circle detection
 #### 2.4 edge level
 **link prediction**: predict whether there are missing links between two nodes
 example: knowledge graph completion
+
+example2: recommendation systems
+users interact with items
+nodes: users and items
+edges: user-item interactions
+task: recommend related pins to users
+
+solution1:
+to learn node embeddins $z_i$ such that:
+
+$$ d(z_{cake1},z_{cake2}) < d(z_{cake1},z_{sweater}) $$, indicating that related items have smaller "distance" between each other.
 
 
 
