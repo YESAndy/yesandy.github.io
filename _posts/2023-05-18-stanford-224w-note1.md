@@ -2,7 +2,7 @@
 title: CS224W--Graph ML introduction and feature engineering
 date: 2023-05-18 13:13:00 +/-0080
 categories: [note]
-tags: [course]     # TAG names should always be lowercase
+tags: [cs224w]     # TAG names should always be lowercase
 math: true
 toc: true
 layout: post
