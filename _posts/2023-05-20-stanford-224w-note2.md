@@ -1,5 +1,5 @@
 ---
-title: CS224W--Graph ML introduction
+title: CS224W--Traditional feature engineering in Graph ML tasks
 author: andy
 date: 2023-05-20 13:25:00 +/-0080
 categories: [note]
