@@ -28,8 +28,8 @@ random walk optimization:
 $Loss = \sum_{u \in V} \sum_{v \in N_R(u)} - log(P(v|z_u))$,
 where $P(v|z_u) = \frac{exp(z_u^T z_v)}{\sum_{n \in V} exp(z_u^T z_n)}$, use softmax because we want node v to be most similar to node u out of all nodes n.
 
-negative sampling
-To reduce computational complexity, only sample a subset of all the nodes:
+negative sampling: 
+to reduce computational complexity, only sample a subset of all the nodes:
 $$log(P(v|z_u)) = log(\frac{exp(z_u^T z_v)}{\sum_{n \in V} exp(z_u^T z_n)}) \approx log(\sigma(z_u^T z_v)) - \sum_{i=1}^k log(\sigma(z_u^T z_{n_i}))$$, where $n_i \in P_V$, $P_V$ is random distribution other than uniform distribution.
 
 **node2vec**
