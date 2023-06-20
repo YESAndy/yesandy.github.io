@@ -37,6 +37,6 @@ two strategies to define a neighborhood:
 global: depth first search; local: breadth first search.
 
 
-### Embed entire graph
+### 3. Embed entire graph
 
 
