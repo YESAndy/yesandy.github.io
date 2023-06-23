@@ -15,7 +15,20 @@ layout: post
 3. Embed entire graph (lecture 3.3)
 
 ### 1. Node embedding
+Instead of traditional feature engineering, vector embedding of nodes can be beneficial in
+ - measure the similarity between nodes
+ - encode network information
+ - potential use for many downstream predictions
 
+**encode-decoder**
+
+Definitions:
+- V is the vertex set
+- A is the adjacency matrix
+- graph $G : \{ V, A \}$
+- encoder: map nodes to embeddings, $ENC(v) = z_v$
+- similarity function $f$, e.g., $f(u,v) \approx z_v^T z_u$
+- decoder: decode embeddings to the similarity score
 
 ### 2. Random walk
 **Random walk**: given a graph and a starting point, select a neighbor of it at random and move to the selected neighbor, and repeat it again and again.
@@ -33,10 +46,25 @@ to reduce computational complexity, only sample a subset of all the nodes:
 $$log(P(v|z_u)) = log(\frac{exp(z_u^T z_v)}{\sum_{n \in V} exp(z_u^T z_n)}) \approx log(\sigma(z_u^T z_v)) - \sum_{i=1}^k log(\sigma(z_u^T z_{n_i}))$$, where $n_i \in P_V$, $P_V$ is random distribution other than uniform distribution.
 
 **node2vec**
+
+![Desktop View](/assets/img/post/2023-06-23-node2vec.png){: width="480" height="480" }
+_node2vec_
+
 two strategies to define a neighborhood:
 global: depth first search; local: breadth first search.
 
 
 ### 3. Embed entire graph
 
+**simple approach**
 
+sum of the embeddings
+
+**virtual node**
+
+sub-graph as a virtual node
+
+**hierarchical embeddings**
+
+![Desktop View](/assets/img/post/2023-06-23-hierarchicalembeddings.png){: width="480" height="480" }
+_hierarchical embeddings_
