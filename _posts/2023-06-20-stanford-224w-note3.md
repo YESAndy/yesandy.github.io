@@ -66,5 +66,5 @@ sub-graph as a virtual node
 
 **hierarchical embeddings**
 
-![Desktop View](/assets/img/post/2023-06-23-hierarchicalembeddings.png){: width="480" height="480" }
+![Desktop View](/assets/img/post/2023-06-23-hierarchicalembedings.png){: width="480" height="480" }
 _hierarchical embeddings_
