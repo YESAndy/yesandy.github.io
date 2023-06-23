@@ -36,3 +36,8 @@ Definitions:
 Definitions:
  - $p(t)$ probability distribution over pages
  - $p(t+1) = M \dot p(t)$, $p(t)$ is a <mark>stationary distribution</mark> of a random walk.
+
+> solving eigenvector equation $\lambda x = A x$
+{: .prompt-tip}
+
+Similarly, the rank vector $r$ can be seen as the eigenvector of $M$ with an eigenvalue of 1.
