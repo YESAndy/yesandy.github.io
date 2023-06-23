@@ -14,7 +14,7 @@ layout: post
 2. Random walk and restarts  (lecture 4.3)
 3. Matrix factorization and node embeddings (lecture 4.4)
 
-### PageRank
+### 1. PageRank
 
 web page contains in-links and out-links
 
@@ -27,12 +27,12 @@ _Link as vote_
 
 Definitions:
  - Rank $r_j = \sum_{i \rightarrow j} \frac{r_i}{d_i}$, where $d_i$ is out-defree of node i.
- - Stochastic adjacency matrix $M_{ij} = \frac{1}{d_j}$, is a ==column== stochastic matrix (columns sum to 1).
+ - Stochastic adjacency matrix $M_{ij} = \frac{1}{d_j}$, is a <mark>column</mark> stochastic matrix (columns sum to 1).
  - Rank vector $r$, where $\sum_i r_i = 1$.
- - ==$r = M r$==.
+ - <mark>$r = M r$</mark>.
 
 **Connect to random walk**
 
 Definitions:
  - $p(t)$ probability distribution over pages
- - $p(t+1) = M \dot p(t)$, $p(t)$ is a ==stationary distribution== of a random walk.
+ - $p(t+1) = M \dot p(t)$, $p(t)$ is a <mark>stationary distribution</mark> of a random walk.
