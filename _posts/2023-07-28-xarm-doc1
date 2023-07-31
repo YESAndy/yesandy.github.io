@@ -1,0 +1,87 @@
+---
+title: XArm Ufactury studio and Python SDK examples
+author: andy
+date: 2023-07-28 15:50:00 +/-0080
+categories: [doc]
+tags: [xarm]     # TAG names should always be lowercase
+math: true
+toc: true
+layout: post
+---
+
+
+
+
+## Start the machine safely
+
+Turn on the switch and the safe button.
+![Desktop View](/assets/img/post/2023-07-30-xarmpowerswitch.png){: width="640" height="320" }
+_xarm power switch button_
+
+Plug in the network cable and wait until the "LAN" light flashes.
+![Desktop View](/assets/img/post/2023-07-30-xarm-safebutton.png){: width="640" height="320" }
+_xarm safe button_
+
+> The safe button is used to stop the machine motion if some harmful behaviors are going to happen.
+{: .prompt-info }
+
+
+### Network settings
+For Mac, change IP address and DNS address
+
+![Desktop View](/assets/img/post/2023-07-30-network-settings.png){: width="640" height="320" }
+_network settings in Mac_
+
+Change manually current WiFi IP address to the address shown in the control box. 
+
+For Windows, follow the instruction from Ufactory xarm user manual <https://www.ufactory.cc/wp-content/uploads/2023/05/xArm-User-Manual-V2.0.0.pdf>.
+
+
+## Ufactory studio
+
+Install Ufactory SDK from this link <https://www.ufactory.cc/ufactory-studio/>
+
+Open the app and enter the IP address of the control box. 
+
+After clicking the "Enable Robot" button, you are ready to use the app.
+
+
+## XArm Python SDK examples
+
+Download the repo from <https://github.com/xArm-Developer/xArm-Python-SDK/tree/master>
+
+Open a terminal,
+
+```bash
+git clone https://github.com/xArm-Developer/xArm-Python-SDK.git
+
+cd xArm-Python-SDK
+
+python setup.py install
+
+```
+
+> A virtual environment is suggested for installing the SDK.
+{: .prompt-tip }
+
+After finishing the network settings, go to ./example/wrapper/ and open robot.conf.
+
+Change the IP address to the one on the control box
+
+In the opened terminal, run the examples
+
+```bash
+python ./example/wrapper/xarm6/2001-move_joint.py
+
+```
+
+> Be careful about the workspace of the end effector.
+{: .prompt-danger }
+
+
+
+
+
+
+
+
