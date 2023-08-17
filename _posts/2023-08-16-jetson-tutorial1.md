@@ -76,8 +76,8 @@ sudo apt --fix-broken install
 2. Connect the DC power supply to the circular power port and wait a moment.
 3. Connect the Micro USB port of the Jetson Nano to the Ubuntu host with a USB cable (note that it is a data cable).
 
-![Desktop View](/assets/img/post/2023-08-17-enter-recovery-mode.jpg){: width="480" height="480" }
-_connect  pin 3 (FEC) and pin 4 (GND pins) to enter recovery mode_
+![Desktop View](/assets/img/post/2023-08-17-recovery-mode.jpg){: width="480" height="480" }
+_connect  pin 3 (FC REC) and pin 4 (GND pins) to enter recovery mode_
 
 #### 6. Flash the Ubuntu image into Jetson
 
