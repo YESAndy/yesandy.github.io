@@ -84,9 +84,9 @@ _The terminal_
 ## A brief intro to Ubuntu
 
 ## Reference
-Jetson Nano Specs <https://developer.nvidia.com/embedded/jetson-nano-developer-kit>
-Jetson Nano Dev Kit Manual <https://www.waveshare.com/wiki/JETSON-NANO-DEV-KIT-MANUAL>
-Nvidia SDK manager user guide <https://docs.nvidia.com/sdk-manager/index.html>
+- Jetson Nano Specs <https://developer.nvidia.com/embedded/jetson-nano-developer-kit>
+- Jetson Nano Dev Kit Manual <https://www.waveshare.com/wiki/JETSON-NANO-DEV-KIT-MANUAL>
+- Nvidia SDK manager user guide <https://docs.nvidia.com/sdk-manager/index.html>
 
 
 
