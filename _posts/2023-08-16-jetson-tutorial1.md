@@ -68,13 +68,15 @@ sudo apt --fix-broken install
 
 #### 4. Now you can find the sdk manager in the application pages in Ubuntu
    
-#### 5. 
-
-
-
+#### 5. Enter Recovery mode
+1. Use jumper caps or Dupont wires to short-circuit pin 3 (FEC) and pin 4 (GND pins), as shown in the figure below, at the bottom of the core board. See [link](https://jetsonhacks.com/nvidia-jetson-nano-j41-header-pinout/) for the 40 pin port details. 
+2. Connect the DC power supply to the circular power port and wait a moment.
+3. Connect the Micro USB port of the Jetson Nano to the Ubuntu host with a USB cable (note that it is a data cable).
 
 ![Desktop View](/assets/img/post/2023-08-17-terminal-icon.png){: width="640" height="240" }
 _The terminal_
+
+#### 6. Flash the Ubuntu image into Jetson
 
 
 
