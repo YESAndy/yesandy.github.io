@@ -27,26 +27,25 @@ All in an easy-to-use platform that runs in as little as 5 watts."
 ### Install Ubuntu in Jetson Nano
 Jetson Nano uses Ubuntu 18.04 system.
 
-There are several ways to boost Jetson Nano with Ubuntu system: 1) SDK manager, 2) Install Ubuntu image on SD card. All of them require you to have a Ubuntu system as the host computer. So if you do not have a Ubuntu system installed on your computer, follow
+There are several ways to boost Jetson Nano with Ubuntu system: 1) __Nvidia SDK manager__, 2) __SD card mirroring__. Both of them require you to have a Ubuntu system as the host computer. So if you do not have a Ubuntu system installed on your computer, follow
 1. For Windows <https://www.thomasmaurer.ch/2019/06/how-to-create-an-ubuntu-vm-on-windows-10/>
 2. For MacOS <https://medium.com/analytics-vidhya/step-by-step-guide-to-download-and-install-virtual-box-in-macos-7341b6f99827>
 
-### Before Boosting
+Before the boosting, 
 1. Insert an empty SD card (at least 32 Gb) in the SD card slot.
+2. Make sure your power supply is at least 5V/4A
 > Follow this link to make sure your SD card is correctly formatted
 {: .prompt-tip }
 
-2. Make sure your power supply is at least 5V/4A
 
-### Boost By 
-
+### Nvidia SDK manager
 
 
-### A brief intro to Ubuntu
-
+### SD card mirroring
 
 ### Usage of the ports 
 
+## A brief intro to Ubuntu
 
 ### Reference
 Jetson Nano Specs <https://developer.nvidia.com/embedded/jetson-nano-developer-kit>
