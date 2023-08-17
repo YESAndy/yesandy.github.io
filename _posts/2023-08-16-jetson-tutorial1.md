@@ -39,6 +39,18 @@ Before the boosting,
 
 
 ### Nvidia SDK manager
+Download the SDK manager by the following link:
+<https://developer.nvidia.com/sdk-manager>,
+
+![Desktop View](/assets/img/post/2023-08-17-sdk-manager-download.png){: width="480" height="480" }
+_Download SDK manager_
+click on the ".deb Ubuntu" to download the SDK manager.
+
+> You need to register an account. After logging in, we can download it successfully. If you don't know how to register, you can refer to [link](https://www.waveshare.com/wiki/NVIDIA-acess)
+{: .prompt-info }
+
+
+
 
 
 ### SD card mirroring
@@ -47,6 +59,10 @@ Before the boosting,
 
 ## A brief intro to Ubuntu
 
-### Reference
+## Reference
 Jetson Nano Specs <https://developer.nvidia.com/embedded/jetson-nano-developer-kit>
 Jetson Nano Dev Kit Manual <https://www.waveshare.com/wiki/JETSON-NANO-DEV-KIT-MANUAL>
+Nvidia SDK manager user guide <https://docs.nvidia.com/sdk-manager/index.html>
+
+
+
