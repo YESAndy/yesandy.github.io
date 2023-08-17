@@ -35,6 +35,9 @@ Before the boosting,
 1. Insert an empty SD card (at least 32 Gb) in the SD card slot.
 2. Make sure your power supply is at least 5V/4A
 
+![Desktop View](/assets/img/post/2023-08-17-insert-sd-card.jpg){: width="480" height="480" }
+_insert the sd card_
+
 > Follow this [link](https://itsfoss.com/format-usb-drive-sd-card-ubuntu/) to make sure your SD card is correctly formatted to __Ext4__ format
 {: .prompt-info }
 
@@ -73,8 +76,8 @@ sudo apt --fix-broken install
 2. Connect the DC power supply to the circular power port and wait a moment.
 3. Connect the Micro USB port of the Jetson Nano to the Ubuntu host with a USB cable (note that it is a data cable).
 
-![Desktop View](/assets/img/post/2023-08-17-terminal-icon.png){: width="640" height="240" }
-_The terminal_
+![Desktop View](/assets/img/post/2023-08-17-recovery-mode.jpg){: width="480" height="480" }
+_connect  pin 3 (FEC) and pin 4 (GND pins) to enter recovery mode_
 
 #### 6. Flash the Ubuntu image into Jetson
 
