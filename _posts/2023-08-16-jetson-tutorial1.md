@@ -34,8 +34,8 @@ There are several ways to boost Jetson Nano with Ubuntu system: 1) __Nvidia SDK 
 Before the boosting, 
 1. Insert an empty SD card (at least 32 Gb) in the SD card slot.
 2. Make sure your power supply is at least 5V/4A
-> Follow this link to make sure your SD card is correctly formatted
-{: .prompt-tip }
+> Follow this [link](https://itsfoss.com/format-usb-drive-sd-card-ubuntu/) to make sure your SD card is correctly formatted to __Ext4__ format
+{: .prompt-info }
 
 
 ### Nvidia SDK manager
@@ -46,7 +46,7 @@ Download the SDK manager by the following link:
 _Download SDK manager_
 click on the ".deb Ubuntu" to download the SDK manager.
 
-> You need to register an account. After logging in, we can download it successfully. If you don't know how to register, you can refer to [link](https://www.waveshare.com/wiki/NVIDIA-acess)
+> You need to register an account. If you don't know how to register, you can refer to [link](https://www.waveshare.com/wiki/NVIDIA-acess)
 {: .prompt-info }
 
 
