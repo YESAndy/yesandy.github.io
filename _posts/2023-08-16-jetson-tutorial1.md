@@ -51,6 +51,7 @@ click on the ".deb Ubuntu" to download the SDK manager.
 
 2. After the download is complete, we enter the download path Downloads to install and input the following content in the [terminal](https://ubuntucommunity.s3.dualstack.us-east-2.amazonaws.com/original/2X/8/85e591c2bdc94b4159329bf19cc1d6740f233b84.png):
 
+
 ```bash
 cd Downloads
 sudo dpkg -i sdkmanager_1.6.1-8175_amd64.deb
@@ -65,6 +66,7 @@ sudo apt --fix-broken install
 ```
 
 4. Now you can find the sdk manager in the application pages in Ubuntu
+   
 
 
 
