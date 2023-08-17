@@ -28,8 +28,8 @@ All in an easy-to-use platform that runs in as little as 5 watts."
 Jetson Nano uses Ubuntu 18.04 system.
 
 There are several ways to boost Jetson Nano with Ubuntu system: 1) __Nvidia SDK manager__, 2) __SD card mirroring__. Both of them require you to have a Ubuntu system as the host computer. So if you do not have a Ubuntu system installed on your computer, follow
-1. For Windows <https://www.thomasmaurer.ch/2019/06/how-to-create-an-ubuntu-vm-on-windows-10/>
-2. For MacOS <https://medium.com/analytics-vidhya/step-by-step-guide-to-download-and-install-virtual-box-in-macos-7341b6f99827>
+- For Windows <https://www.thomasmaurer.ch/2019/06/how-to-create-an-ubuntu-vm-on-windows-10/>
+- For MacOS <https://medium.com/analytics-vidhya/step-by-step-guide-to-download-and-install-virtual-box-in-macos-7341b6f99827>
 
 Before the boosting, 
 1. Insert an empty SD card (at least 32 Gb) in the SD card slot.
@@ -55,7 +55,7 @@ click on the ".deb Ubuntu" to download the SDK manager.
 cd Downloads
 sudo dpkg -i sdkmanager_1.6.1-8175_amd64.deb
 ```
-< Change the package name "sdkmanager_1.6.1-8175_amd64.deb" according to your downloaded version.
+> Change the package name "sdkmanager_1.6.1-8175_amd64.deb" according to your downloaded version.
 {: .prompt-info }
 
 3. After the installation is complete, the system may report an error that the dependency files cannot be found. Enter the following command to solve this problem.
