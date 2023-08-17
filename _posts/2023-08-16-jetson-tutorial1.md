@@ -39,7 +39,7 @@ Before the boosting,
 
 
 ### Nvidia SDK manager
-1. Download the SDK manager by the following link:
+#### 1. Download the SDK manager by the following link:
 <https://developer.nvidia.com/sdk-manager>,
 
 ![Desktop View](/assets/img/post/2023-08-17-sdk-manager-download.png){: width="480" height="480" }
@@ -49,7 +49,7 @@ click on the ".deb Ubuntu" to download the SDK manager.
 > You need to register an account. If you don't know how to register, you can refer to [link](https://www.waveshare.com/wiki/NVIDIA-acess)
 {: .prompt-info }
 
-2. After the download is complete, we enter the download path Downloads to install and input the following content in the [terminal](https://ubuntucommunity.s3.dualstack.us-east-2.amazonaws.com/original/2X/8/85e591c2bdc94b4159329bf19cc1d6740f233b84.png):
+#### 2. After the download is complete, we enter the download path Downloads to install and input the following content in the [terminal](https://ubuntucommunity.s3.dualstack.us-east-2.amazonaws.com/original/2X/8/85e591c2bdc94b4159329bf19cc1d6740f233b84.png):
 
 
 ```bash
@@ -59,15 +59,15 @@ sudo dpkg -i sdkmanager_1.6.1-8175_amd64.deb
 > Change the package name "sdkmanager_1.6.1-8175_amd64.deb" according to your downloaded version.
 {: .prompt-info }
 
-3. After the installation is complete, the system may report an error that the dependency files cannot be found. Enter the following command to solve this problem.
+#### 3. After the installation is complete, the system may report an error that the dependency files cannot be found. Enter the following command to solve this problem.
 
 ```bash
 sudo apt --fix-broken install
 ```
 
-4. Now you can find the sdk manager in the application pages in Ubuntu
+#### 4. Now you can find the sdk manager in the application pages in Ubuntu
    
-
+#### 5. 
 
 
 
