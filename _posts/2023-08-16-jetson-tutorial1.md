@@ -140,16 +140,15 @@ In the same terminal in step 3, flash the image into SD card by:
 sudo ./flash.sh jetson-nano-emmc mmcblk0p1
 ```
 
+After the compilation is completed, insert the SD card back into Jetson Nano. Now we are ready to boost Jetson Nano!
 
 
-### Usage of the ports 
-See [link](https://jetsonhacks.com/nvidia-jetson-nano-j41-header-pinout/) for the 40-pin port details. 
 ## A brief intro to Ubuntu
 
 ## Reference
 - Jetson Nano Specs <https://developer.nvidia.com/embedded/jetson-nano-developer-kit>
 - Jetson Nano Dev Kit Manual <https://www.waveshare.com/wiki/JETSON-NANO-DEV-KIT-MANUAL>
 - Nvidia SDK manager user guide <https://docs.nvidia.com/sdk-manager/index.html>
-
+- The 40-pin port <https://jetsonhacks.com/nvidia-jetson-nano-j41-header-pinout/>
 
 
