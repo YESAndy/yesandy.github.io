@@ -32,7 +32,7 @@ sudo pip3 install virtualenv
 To create a virtual environment, run:
 ```bash
 cd $YOUR_PROJECT_DIRECTORY
-virtualenv your_env_name python=3.8
+virtualenv your_env_name python=3.6
 ```
 
 To activate the created virtual environment, run:
@@ -43,12 +43,27 @@ source ./your_env_name/bin/activate
 and you can see your_env_name is activated:
 
 ### Install trt-pose 
-In the same terminal, download trt-pose repo from github by,
 
+#### 1. Install PyTorch
+Open a terminal, and activate the created virtual environment:
 ```bash
-git clone https://github.com/NVIDIA-AI-IOT/trt_pose.git
-cd torch2trt
+source ./your_env_name/bin/activate
 ```
+
+Download PyTorch wheel file from this [link](https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048).
+
+![Desktop View](/assets/img/post/2023-08-18-download-pytorch.png){: width="480" height="480" }
+_Download Pytorch wheel file_
+
+Click on "torch-1.10.0-cp36-cp36m-linux_aarch64.whl" and download it to your project directory.
+
+Set the install path by:
+```bash
+export TORCH_INSTALL=path/to/torch-1.10.0-cp36-cp36m-linux_aarch64.whl
+```
+
+
+
 
 Install repo dependencies:
 ```bash
@@ -57,7 +72,11 @@ sudo apt-get install python3-matplotlib
 ```
 
 Install trt-pose:
+Download and install trt-pose from GitHub by,
+
 ```bash
+git clone https://github.com/NVIDIA-AI-IOT/trt_pose.git
+cd torch2trt
 python setup.py install --plugins
 ```
 
