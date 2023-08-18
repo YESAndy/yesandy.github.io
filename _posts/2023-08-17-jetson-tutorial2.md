@@ -26,3 +26,4 @@ reference video tutorial
 
 
 ## Environmental sensors
+Sensor spec <https://www.waveshare.com/environment-sensor-for-jetson-nano.htm>
