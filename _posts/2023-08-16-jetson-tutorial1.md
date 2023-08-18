@@ -72,7 +72,7 @@ sudo apt --fix-broken install
 #### 4. Now you can find the sdk manager in the application pages in Ubuntu
    
 #### 5. Enter Recovery mode
-1. Use jumper caps or Dupont wires to short-circuit pin 3 (FEC) and pin 4 (GND pins), as shown in the figure below, at the bottom of the core board. 
+1. Use jumper caps or Dupont wires to short-circuit pin 3 (FC REC) and pin 4 (GND pins), as shown in the figure below, at the bottom of the core board. 
 2. Connect the DC power supply to the circular power port and wait a moment.
 3. Connect the Micro USB port of the Jetson Nano to the Ubuntu host with a USB cable (note that it is a data cable).
 
@@ -84,6 +84,25 @@ _Connect pin 3 (FC REC) and pin 4 (GND pins) to enter recovery mode_
 
 
 ### SD card mirroring
+#### 1. Install dependencies in host computer
+Open a terminal, run the following commands:
+
+```bash
+sudo apt-get install qemu-user-static
+sudo apt-get install python
+```
+
+#### 2. Download Jetpack image
+Go to <https://developer.nvidia.com/embedded/linux-tegra-r3251>,
+![Desktop View](/assets/img/post/2023-08-17-download-jetpack.png){: width="480" height="480" }
+_Download Jetpack image_
+
+
+
+
+
+
+
 
 ### Usage of the ports 
 See [link](https://jetsonhacks.com/nvidia-jetson-nano-j41-header-pinout/) for the 40 pin port details. 
