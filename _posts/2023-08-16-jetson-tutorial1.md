@@ -106,11 +106,11 @@ Open a terminal, create a folder named "32.5.1":
 mkdir 32.5.1&cd 32.5.1
 ```
 
-Move the downloaded driver package "Tegra186_Linux_R32.5.1_aarch64.tbz2" and the sample root system "Tegra_Linux_Sample-Root-Filesystem_R32.5.1_aarch64.tbz2" into the "32.5.1" folder.
+Move the downloaded driver package "Jetson-210_Linux_R32.5.1_aarch64.tbz2" and the sample root system "Tegra_Linux_Sample-Root-Filesystem_R32.5.1_aarch64.tbz2" into the "32.5.1" folder.
 
 In the same terminal, uncompress the driver package:
 ```bash
-tar -xf Tegra186_Linux_R32.5.1_aarch64.tbz2
+tar -xf Jetson-210_Linux_R32.5.1_aarch64.tbz2
 ```
 
 Then go to the L4T package directory and uncompress the sample root file system:
