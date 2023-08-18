@@ -100,9 +100,15 @@ Follow "Step 3" in the guide from the [trt-pose](https://github.com/NVIDIA-AI-IO
 
 
 ## Data collection and preprocessing
+### Camera Installation and data acquisition
 
-reference video tutorial
+To connect the camera to Jetson Nano, refer to the following video tutorial:
+
+Video tutorial on camera installation
 {% include embed/youtube.html id='dHvb225Pw1s' %}
+
+
+
 
 
 ## Model Training
