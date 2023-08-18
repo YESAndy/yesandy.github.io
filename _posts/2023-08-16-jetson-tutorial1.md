@@ -74,7 +74,7 @@ sudo apt --fix-broken install
 #### 5. Enter Recovery mode
 1. Use jumper caps or Dupont wires to short-circuit pin 3 (FC REC) and pin 4 (GND pins), as shown in the figure below, at the bottom of the core board. 
 2. Connect the DC power supply to the circular power port and wait a moment.
-3. Connect the Micro USB port of the Jetson Nano to the Ubuntu host with a USB cable (note that it is a data cable).
+
 
 ![Desktop View](/assets/img/post/2023-08-17-enter-recovery-mode.jpg){: width="480" height="480" }
 _Connect pin 3 (FC REC) and pin 4 (GND pins) to enter recovery mode_
@@ -120,7 +120,7 @@ cd Linux_for_Tegra/rootfs
 sudo tar -xpf ../../ Tegra_Linux_Sample-Root-Filesystem_R32.5.1_aarch64.tbz2
 ```
 
-Wait until the compile is completed, then go back the root directory "./Linux_for_Tegra":
+Wait until the compile is completed, then go back to the root directory "./Linux_for_Tegra":
 ```bash
 cd ..
 ```
@@ -131,13 +131,19 @@ sudo ./apply_binaries.sh
 ```
 
 #### 4. Flash the image into SD card
+Before connecting to the host computer, Jetson Nano should be in recovery mode.
 
+Connect the Micro USB port of the Jetson Nano to the Ubuntu host with a USB cable.
 
+In the same terminal in step 3, flash the image into SD card by:
+```bash
+sudo ./flash.sh jetson-nano-emmc mmcblk0p1
+```
 
 
 
 ### Usage of the ports 
-See [link](https://jetsonhacks.com/nvidia-jetson-nano-j41-header-pinout/) for the 40 pin port details. 
+See [link](https://jetsonhacks.com/nvidia-jetson-nano-j41-header-pinout/) for the 40-pin port details. 
 ## A brief intro to Ubuntu
 
 ## Reference
