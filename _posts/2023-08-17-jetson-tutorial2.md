@@ -16,6 +16,10 @@ layout: post
 4. Data processing
 
 ## Introduction
+
+![Desktop View](/assets/img/post/2023-08-18-trt-pose-demo.gif){: width="480" height="480" }
+_trt-pose demo_
+
 This tutorial aims to provide a starter for data collection using Jetson Nano and a Raspberry Pi camera. The source project is from [Jetson Community](https://developer.nvidia.com/embedded/community/jetson-projects?page=1). 
 
 In this tutorial, the goal is to perform real-time pose estimation using Jetson Nano and a monocular camera. We will use [trt-pose](https://github.com/NVIDIA-AI-IOT/trt_pose/tree/master) as our template.
