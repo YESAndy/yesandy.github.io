@@ -11,9 +11,8 @@ layout: post
 
 ## Content
 1. Jetson Nano setup
-2. A Brief Intro to Linux 
-3. Camera setup
-4. 
+2. Camera setup
+
 
 ## Jetson Nano Setup
 ### Overview of Jetson Nano
@@ -142,13 +141,20 @@ sudo ./flash.sh jetson-nano-emmc mmcblk0p1
 
 After the compilation is completed, insert the SD card back into Jetson Nano. Now we are ready to boost Jetson Nano!
 
+### Boost Jetson Nano
+> Make sure you unplug the short-circuit for the recovery mode.
+{: .prompt-warning }
 
-## A brief intro to Ubuntu
+Connect the DC power supply to the circular power port and wait a moment.
+
+
+
 
 ## Reference
 - Jetson Nano Specs <https://developer.nvidia.com/embedded/jetson-nano-developer-kit>
 - Jetson Nano Dev Kit Manual <https://www.waveshare.com/wiki/JETSON-NANO-DEV-KIT-MANUAL>
 - Nvidia SDK manager user guide <https://docs.nvidia.com/sdk-manager/index.html>
+- Ubuntu tutorials <https://ubuntu.com/tutorials>
 - The 40-pin port <https://jetsonhacks.com/nvidia-jetson-nano-j41-header-pinout/>
 
 
