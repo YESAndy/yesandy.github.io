@@ -97,8 +97,40 @@ Go to <https://developer.nvidia.com/embedded/linux-tegra-r3251>,
 ![Desktop View](/assets/img/post/2023-08-17-download-jetpack.png){: width="480" height="480" }
 _Download Jetpack image_
 
+Click on "L4T Driver Package (BSP)" and "	Sample Root Filesystem" to download the L4T driver and the sample root system for linux.
+
+#### 3. Compile the image
 
 
+Open a terminal, create a folder named "32.5.1":
+```bash
+mkdir 32.5.1&cd 32.5.1
+```
+
+Move the downloaded driver package "Tegra186_Linux_R32.5.1_aarch64.tbz2" and the sample root system "Tegra_Linux_Sample-Root-Filesystem_R32.5.1_aarch64.tbz2" into the "32.5.1" folder.
+
+In the same terminal, uncompress the driver package:
+```bash
+tar -xf Tegra186_Linux_R32.5.1_aarch64.tbz2
+```
+
+Then go to the L4T package directory and uncompress the sample root file system:
+```bash
+cd Linux_for_Tegra/rootfs
+sudo tar -xpf ../../ Tegra_Linux_Sample-Root-Filesystem_R32.5.1_aarch64.tbz2
+```
+
+Wait until the compile is completed, then go back the root directory "./Linux_for_Tegra":
+```bash
+cd ..
+```
+
+Finally, install the image by:
+```bash
+sudo ./apply_binaries.sh
+```
+
+#### 4. Flash the image into SD card
 
 
 
