@@ -21,7 +21,8 @@ This tutorial aims to provide a starter for data collection using Jetson Nano an
 Here we use Raspberry Pi Camera module v2 as a template. Please follow the previous guide for camera installation.
 
 
-reference video tutorial {% include embed/youtube.html id='dHvb225Pw1s' %}
+reference video tutorial
+{% include embed/youtube.html id='dHvb225Pw1s' %}
 
 
 ## Environmental sensors
