@@ -116,7 +116,7 @@ tar -xf Jetson-210_Linux_R32.5.1_aarch64.tbz2
 Then go to the L4T package directory and uncompress the sample root file system:
 ```bash
 cd Linux_for_Tegra/rootfs
-sudo tar -xpf ../../ Tegra_Linux_Sample-Root-Filesystem_R32.5.1_aarch64.tbz2
+sudo tar -xpf ../../Tegra_Linux_Sample-Root-Filesystem_R32.5.1_aarch64.tbz2
 ```
 
 Wait until the compile is completed, then go back to the root directory "./Linux_for_Tegra":
