@@ -91,6 +91,9 @@ cd trt_pose
 python setup.py install
 ```
 
+#### 5. Download the pre-trained models
+Follow "Step 3" in the guide from the [trt-pose](https://github.com/NVIDIA-AI-IOT/trt_pose/tree/master) repo
+
 
 ## Data collection and preprocessing
 
