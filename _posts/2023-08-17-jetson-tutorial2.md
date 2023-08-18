@@ -62,22 +62,33 @@ Set the install path by:
 export TORCH_INSTALL=path/to/torch-1.10.0-cp36-cp36m-linux_aarch64.whl
 ```
 
+Then install PyTorch by:
+```bash
+python3 -m pip install --upgrade pip; python3 -m pip install aiohttp numpy=='1.19.4' scipy=='1.5.3' export "LD_LIBRARY_PATH=/usr/lib/llvm-8/lib:$LD_LIBRARY_PATH"; python3 -m pip install --upgrade protobuf; python3 -m pip install --no-cache $TORCH_INSTALL
+```
 
+#### 2. Install torch2trt
+In the same terminal, run:
+```bash
+git clone https://github.com/NVIDIA-AI-IOT/torch2trt
+cd torch2trt
+python setup.py install --plugins
+```
 
-
-Install repo dependencies:
+#### 3. Install other dependencies:
 ```bash
 pip install tqdm cython pycocotools
 sudo apt-get install python3-matplotlib
 ```
 
-Install trt-pose:
+#### 4. Install trt-pose:
 Download and install trt-pose from GitHub by,
 
 ```bash
+cd ..
 git clone https://github.com/NVIDIA-AI-IOT/trt_pose.git
-cd torch2trt
-python setup.py install --plugins
+cd trt_pose
+python setup.py install
 ```
 
 
@@ -93,3 +104,4 @@ reference video tutorial
 
 ## Reference
 - TRT-POSE <https://github.com/NVIDIA-AI-IOT/trt_pose/tree/master>
+- Install PyTorch in Jetson <https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html>
