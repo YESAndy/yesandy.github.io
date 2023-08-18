@@ -147,7 +147,9 @@ After the compilation is completed, insert the SD card back into Jetson Nano. No
 
 Connect the DC power supply to the circular power port and wait a moment.
 
+Connect a keyboard, a mouse, and a monitor to Jetson Nano.
 
+Follow the guide to complete Ubuntu installation.
 
 
 ## Reference
@@ -155,6 +157,7 @@ Connect the DC power supply to the circular power port and wait a moment.
 - Jetson Nano Dev Kit Manual <https://www.waveshare.com/wiki/JETSON-NANO-DEV-KIT-MANUAL>
 - Nvidia SDK manager user guide <https://docs.nvidia.com/sdk-manager/index.html>
 - Ubuntu tutorials <https://ubuntu.com/tutorials>
+- Ubuntu installation guide <https://ubuntu.com/tutorials/install-ubuntu-desktop#9-create-your-login-details>
 - The 40-pin port <https://jetsonhacks.com/nvidia-jetson-nano-j41-header-pinout/>
 
 
