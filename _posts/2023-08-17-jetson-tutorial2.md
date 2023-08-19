@@ -100,15 +100,28 @@ Follow "Step 3" in the guide from the [trt-pose](https://github.com/NVIDIA-AI-IO
 
 
 ## Data collection and preprocessing
-### Camera Installation and data acquisition
+### Camera Installation
 
 To connect the camera to Jetson Nano, refer to the following video tutorial:
 
 Video tutorial on camera installation
 {% include embed/youtube.html id='dHvb225Pw1s' %}
 
+### Data acquisition
+Open a terminal, activate the created virtual environment,
+```bash
+source ./your_env_name/bin/activate
+```
 
+Download the CSI camera project by:
+```bash
+git clone https://github.com/JetsonHacksNano/CSI-Camera.git
+```
 
+Install dependencies:
+``bash
+pip install opencv-python
+```
 
 
 ## Model Training
