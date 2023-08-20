@@ -68,12 +68,13 @@ export TORCH_INSTALL=path/to/torch-1.10.0-cp36-cp36m-linux_aarch64.whl
 
 Then install PyTorch by:
 ```bash
-python3 -m pip install --upgrade pip; python3 -m pip install aiohttp numpy=='1.19.4' scipy=='1.5.3' export "LD_LIBRARY_PATH=/usr/lib/llvm-8/lib:$LD_LIBRARY_PATH"; python3 -m pip install --upgrade protobuf; python3 -m pip install --no-cache $TORCH_INSTALL
+python3 -m pip install --upgrade pip; python3 -m pip install aiohttp numpy=='1.19.4' scipy=='1.5.3' export "LD_LIBRARY_PATH=/usr/lib/llvm-8/:$LD_LIBRARY_PATH"; python3 -m pip install --upgrade protobuf; python3 -m pip install --no-cache $TORCH_INSTALL
 ```
 
 #### 2. Install torch2trt
 In the same terminal, run:
 ```bash
+pip install vidia-pyindex 
 git clone https://github.com/NVIDIA-AI-IOT/torch2trt
 cd torch2trt
 python setup.py install --plugins
@@ -122,11 +123,14 @@ python setup.py install
 
 Install dependencies:
 ```bash
-pip install opencv-python
+sudo apt update
+sudo apt install v4t-utils
+pip install opencv-python=4.5.3.36
 ```
 
 Then run the demo camera capture script:
 ```bash
+export OPENBLAS_CORETYPE=ARMV8
 python simple_camera.py
 ```
 
