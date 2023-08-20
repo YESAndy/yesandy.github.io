@@ -113,18 +113,29 @@ Open a terminal, activate the created virtual environment,
 source ./your_env_name/bin/activate
 ```
 
-Download the CSI camera project by:
+Download and install the jetcam project by:
 ```bash
-git clone https://github.com/JetsonHacksNano/CSI-Camera.git
+git clone https://github.com/NVIDIA-AI-IOT/jetcam
+cd jetcam
+python setup.py install
 ```
 
 Install dependencies:
-``bash
+```bash
 pip install opencv-python
 ```
 
+Then run the demo camera capture script:
+```bash
+python simple_camera.py
+```
 
-## Model Training
+simple_camera.py provide a pipeline for capturing live video stream from the camera. 
+
+## Model Inference
+
+A [live_demo](https://github.com/NVIDIA-AI-IOT/trt_pose/blob/master/tasks/human_pose/live_demo.ipynb) is provided for human pose estimation model inference. As we are using 
+
 
 
 
