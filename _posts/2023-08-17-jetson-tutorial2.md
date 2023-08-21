@@ -33,6 +33,8 @@ virtualenv is a virtual environment tool for organizing Python packages for proj
 ```bash
 sudo apt-get install python3-pip
 sudo pip3 install virtualenv
+sudo apt install python3.8
+sudo apt install libpython3.8-dev
 ```
 
 To create a virtual environment, run:
@@ -98,7 +100,10 @@ cv2.destroyAllWindows()
 Open a terminal, and activate the created virtual environment:
 ```bash
 source ./your_env_name/bin/activate
+pip install ultralytics
 ```
+
+#### 2. Install PyTorch
 
 Download PyTorch wheel file from this [link](https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048).
 
@@ -117,40 +122,14 @@ Then install PyTorch by:
 python3 -m pip install --upgrade pip; python3 -m pip install aiohttp numpy=='1.19.4' scipy=='1.5.3' export "LD_LIBRARY_PATH=/usr/lib/llvm-8/:$LD_LIBRARY_PATH"; python3 -m pip install --upgrade protobuf; python3 -m pip install --no-cache $TORCH_INSTALL
 ```
 
-#### 2. Install torch2trt
-In the same terminal, run:
-```bash
-pip install vidia-pyindex 
-git clone https://github.com/NVIDIA-AI-IOT/torch2trt
-cd torch2trt
-python setup.py install --plugins
-```
 
 #### 3. Install other dependencies:
 ```bash
 pip install tqdm cython pycocotools
 sudo apt-get install python3-matplotlib
 ```
+#### 4. Model inference
 
-#### 4. Install trt-pose:
-Download and install trt-pose from GitHub by,
-
-```bash
-cd ..
-git clone https://github.com/NVIDIA-AI-IOT/trt_pose.git
-cd trt_pose
-python setup.py install
-```
-
-#### 5. Download the pre-trained models
-Follow "Step 3" in the guide from the [trt-pose](https://github.com/NVIDIA-AI-IOT/trt_pose/tree/master) repo
-
-
-
-
-## Model Inference
-
-A [live_demo](https://github.com/NVIDIA-AI-IOT/trt_pose/blob/master/tasks/human_pose/live_demo.ipynb) is provided for human pose estimation model inference. As we are using 
 
 
 
@@ -158,3 +137,4 @@ A [live_demo](https://github.com/NVIDIA-AI-IOT/trt_pose/blob/master/tasks/human_
 ## Reference
 - TRT-POSE <https://github.com/NVIDIA-AI-IOT/trt_pose/tree/master>
 - Install PyTorch in Jetson <https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html>
+- YOLO-v8 architecture <https://github.com/ultralytics/ultralytics/issues/189>
