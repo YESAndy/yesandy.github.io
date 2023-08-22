@@ -292,4 +292,4 @@ result = model.predict(source=test_image_path, save=True, imgsz=384, conf=0.5)
 - Install PyTorch in Jetson <https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html>
 - YOLO-v8 architecture <https://github.com/ultralytics/ultralytics/issues/189>
 - YOLOV8 demo with Jetson Nano <https://wiki.seeedstudio.com/YOLOv8-DeepStream-TRT-Jetson/>
-- 
+
