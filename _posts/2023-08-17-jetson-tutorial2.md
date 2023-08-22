@@ -169,8 +169,10 @@ project = rf.workspace("xmagical").project("hard-hat-sample-jebrb")
 dataset = project.version(2).download("yolov8")
 ```
 
+For example, we can download the dataset under "./data" folder. 
 
-
+![Desktop View](/assets/img/post/2023-08-21-dataset.png){: width="640" height="540" }
+_Content of dataset folder_
 
 ## Model Training and Inference
 We will utilize the training pipeline provided by Ultralytics.
@@ -184,7 +186,7 @@ source ./your_env_name/bin/activate
 pip install ultralytics
 ```
 
-You can test if the packages are installed sucessfully by running the following command:
+You can test if the packages are installed successfully by running the following command:
 ```bash
 yolo predict model=yolov8n.pt source='https://ultralytics.com/images/bus.jpg'
 ```
@@ -212,6 +214,8 @@ Then install PyTorch by:
 ```bash
 python3 -m pip install --upgrade pip; python3 -m pip install aiohttp numpy=='1.19.4' scipy=='1.5.3' export "LD_LIBRARY_PATH=/usr/lib/llvm-8/:$LD_LIBRARY_PATH"; python3 -m pip install --upgrade protobuf; python3 -m pip install --no-cache $TORCH_INSTALL
 ```
+
+### Train your model
 
 
 
