@@ -195,8 +195,8 @@ roboflow:
 We may have to change the train, val, and test path to an absolute form in the data.yaml, for example:
 ```yaml
 train: ~/Downloads/data//Hard Hat Sample.v1-raw.yolov8/train/images
-val: ../Downloads/data//Hard Hat Sample.v1-raw.yolov8//images
-test: ../Downloads/data//Hard Hat Sample.v1-raw.yolov8//images
+val: ~/Downloads/data//Hard Hat Sample.v1-raw.yolov8//images
+test: ~/Downloads/data//Hard Hat Sample.v1-raw.yolov8//images
 ```
 
 ## Model Training and Inference
@@ -241,6 +241,17 @@ python3 -m pip install --upgrade pip; python3 -m pip install aiohttp numpy=='1.1
 ```
 
 ### Train your model
+Thanks to Ultralytics, we can train the object detection model by simply running the following command line:
+
+```bash
+yolo train data=~/Downloads/data/data.yaml model=yolov8n.pt epochs=100 lr0=0.01
+```
+
+Change the value of "data" argument accordingly. Ultralytics provides a series of models with different sizes. "epochs" (i.e., number of epochs to train) and "lr0" (i.e., initial learning rate) are hyperparameters. A list of hyperparameters can be found at [link](https://docs.ultralytics.com/usage/cfg/#train).
+
+
+
+After the training is completed, the model is automatically saved to a local folder. 
 
 
 
