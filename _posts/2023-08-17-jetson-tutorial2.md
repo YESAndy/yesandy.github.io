@@ -53,20 +53,7 @@ and you can see your_env_name is activated:
 ## Data collection and preprocessing
 We will first make sure we can receive images from the web camera using opencv-python package. 
 ### Camera Installation
-Connect the web camera to Jetson Nano through USB port
-
-### Data acquisition
-Open a terminal, activate the created virtual environment,
-```bash
-source ./your_env_name/bin/activate
-```
-
-Install dependencies:
-```bash
-sudo apt update
-sudo apt install v4t-utils
-pip install opencv-python
-```
+Connect the web camera to Jetson Nano through USB port.
 
 Open the ".bashrc" file under home directory, and type `export OPENBLAS_CORETYPE=ARMV8` at the end of the file. 
 
@@ -77,21 +64,64 @@ Then source .bashrc in the terminal:
 source ~/.bashrc
 ```
 
-Now we can test image capture using OpenCV package by the following script:
+### Data acquisition
+
+#### 1. Install dependencies:
+Open a terminal, activate the created virtual environment,
+```bash
+source ./your_env_name/bin/activate
+```
+
+```bash
+sudo apt update
+sudo apt install v4t-utils
+pip install opencv-python
+```
+
+#### 2. Test video streaming
+
+Now we can test image capture using opencv-python package by the following script:
 ```python
 import cv2
 
+# 0 means /dev/video0, you may adjust this value if you have another camera.
 cam = cv2.VideoCapture(0)
 while True:
   check, frame = cam.read()
   cv2.imshow("video", frame)
 
   key = cv2.waitKey(1)
-  if key == 27:
+  if key == 27:  # 27 mean ESC in keyboard
     break
 cam.release()
 cv2.destroyAllWindows()
 ```
+
+#### 3. Save images using the keyboard
+
+Here we show a simple demo about how to collect and save images.
+```python
+import cv2
+
+file_root = "/path/to/project/"  # change accordingly
+count = 0
+
+# 0 means /dev/video0, you may adjust this value if you have another camera.
+cam = cv2.VideoCapture(0)
+while True:
+  check, frame = cam.read()
+  cv2.imshow("video", frame)
+
+  key = cv2.waitKey(1)
+  if key == 27:  # 27 mean ESC in keyboard
+    break
+  elif key == 32:  # 32 means space
+    cv2.imwrite(f"{file_root}/{count}.png", frame) # save images
+
+cam.release()
+cv2.destroyAllWindows()
+```
+
 
 
 ### Install Ultralytics package and other dependencies
