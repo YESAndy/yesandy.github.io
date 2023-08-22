@@ -23,6 +23,9 @@ _Object Detection using YOLOV8 demo_
 
 This tutorial aims to provide a starter project for image data collection for Hard Hat detection using Jetson Nano and a Web camera. 
 
+![Desktop View](/assets/img/post/2023-08-21-yolo-results.jpg){: width="480" height="480" }
+_A test example of YOLOv8 for Hard hat detection_
+
 There are many other interesting projects from [Jetson Community](https://developer.nvidia.com/embedded/community/jetson-projects?page=1). 
 
 In this tutorial, the goal is to perform real-time object detection using Jetson Nano and a monocular camera. We will utilize the training pipeline from [Ultralytics](https://github.com/ultralytics/ultralytics).
