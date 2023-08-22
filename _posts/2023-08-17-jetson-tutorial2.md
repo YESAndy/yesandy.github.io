@@ -125,8 +125,8 @@ cv2.destroyAllWindows()
 
 
 
-## Data Labeling
-We will use [Roboflow](https://roboflow.com/), an online image annotation platform, to label our data. 
+## Dataset Creation
+We will use [Roboflow](https://roboflow.com/), an online image annotation platform, to generate our dataset. 
 
 Sign up for an account and create a project. Then we can start uploading the collected from Jetson Nano. 
 
@@ -173,6 +173,25 @@ For example, we can download the dataset under "./data" folder.
 
 ![Desktop View](/assets/img/post/2023-08-21-dataset.png){: width="640" height="540" }
 _Content of dataset folder_
+
+The "data.yaml" file is a configuration file that sets up the label names and dataset paths. An example of it is like the following:
+
+```yaml
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['head', 'helmet', 'person']
+
+roboflow:
+  workspace: xmagical
+  project: hard-hat-sample-jebrb
+  version: 1
+  license: Public Domain
+  url: https://app.roboflow.com/xmagical/hard-hat-sample-jebrb/1
+```
+
 
 ## Model Training and Inference
 We will utilize the training pipeline provided by Ultralytics.
