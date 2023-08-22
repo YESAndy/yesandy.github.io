@@ -241,17 +241,32 @@ python3 -m pip install --upgrade pip; python3 -m pip install aiohttp numpy=='1.1
 ```
 
 ### Train your model
+
+#### 1. Initiate the training
 Thanks to Ultralytics, we can train the object detection model by simply running the following command line:
 
 ```bash
 yolo train data=~/Downloads/data/data.yaml model=yolov8n.pt epochs=100 lr0=0.01
 ```
 
-Change the value of "data" argument accordingly. Ultralytics provides a series of models with different sizes. "epochs" (i.e., number of epochs to train) and "lr0" (i.e., initial learning rate) are hyperparameters. A list of hyperparameters can be found at [link](https://docs.ultralytics.com/usage/cfg/#train).
+Change the value of "data" argument accordingly. 
 
+Ultralytics provides a series of models with different sizes. "epochs" (i.e., number of epochs to train) and "lr0" (i.e., initial learning rate) are hyperparameters. A list of hyperparameters can be found at [link](https://docs.ultralytics.com/usage/cfg/#train).
 
+#### 2. Track the training progress
+After starting the training, the program may ask you to log into [wandb](https://wandb.ai/site) used to track training progress. 
+
+Sign up for an account on wandb website, and go to "User Settings". Find "API key" section and copy the API key:
+
+![Desktop View](/assets/img/post/2023-08-21-wandb-keyapi.png){: width="640" height="540" }
+_Get API key from wandb_
+
+Enter the API key in the terminal if required. 
 
 After the training is completed, the model is automatically saved to a local folder. 
+
+### Model inference
+
 
 
 
