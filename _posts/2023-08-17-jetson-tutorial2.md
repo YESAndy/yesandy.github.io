@@ -160,7 +160,7 @@ _Download dataset_
 There are two ways to download the dataset. First, we can just download a zip file and extract it to a local folder. Second, we can download it by running a script copied from the snippet like the following:
 
 ```python
-!pip install roboflow
+!pip install roboflow  # remove this line if you have installed it
 
 from roboflow import Roboflow
 rf = Roboflow(api_key="SUWxwWJf88eAaWZdhWnx")
