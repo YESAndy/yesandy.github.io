@@ -19,7 +19,7 @@ layout: post
 ## Introduction
 
 ![Desktop View](/assets/img/post/2023-08-21-yolo-demo.gif){: width="480" height="480" }
-_Object Detection using YOLOV8 demo_
+_Object Detection demo using YOLOV8_
 
 This tutorial aims to provide a starter project for image data collection for Hard Hat detection using Jetson Nano and a Web camera. 
 
