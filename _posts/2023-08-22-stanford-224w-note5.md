@@ -15,3 +15,10 @@ layout: post
 3. collective classifier
 
 
+
+
+
+## Reference
+- message passing explanation <https://wandb.ai/graph-neural-networks/spatial/reports/An-Introduction-to-Message-Passing-Graph-Neural-Networks-GNNs---VmlldzoyMDI2NTg2>
+
+
