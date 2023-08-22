@@ -148,7 +148,14 @@ Then, add data preprocessing (e.g., cropping) and augmentation (e.g., blur and r
 
 Finally, just click on "generate" to generate a version of the dataset. 
 
+![Desktop View](/assets/img/post/2023-08-21-roboflow-generate.png){: width="640" height="540" }
+_Generate dataset_
+
+
 In the "version" section, select an annotation format (e.g., YOLOv8) and click on "Get Snippet".
+
+![Desktop View](/assets/img/post/2023-08-21-roboflow-download.png){: width="640" height="540" }
+_Download dataset_
 
 There are two ways to download the dataset. First, we can just download a zip file and extract it to a local folder. Second, we can download it by running a script copied from the snippet like the following:
 
