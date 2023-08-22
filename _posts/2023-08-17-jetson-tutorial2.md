@@ -266,10 +266,26 @@ Enter the API key in the terminal if required.
 After the training is completed, the model is automatically saved to a local folder. 
 
 ### Model inference
+There are two ways to model inference. 
 
+First, we can use Ultralytics CLI commands:
+```bash
+yolo detect predict model=path/to/best.pt source=/path/to/test.jpg
+```
 
+Second, we can write script in Python, an example would be:
+```python
+from ultralytics import YOLO
 
+test_image_path = "/path/to/test.jpg"
 
+# load model
+model = YOLO("/path/to/runs/detect/train1/weights/best.pt")
+
+# predict and save result
+result = model.predict(source=test_image_path, save=True, imgsz=384, conf=0.5)
+
+```
 
 ## Reference
 - TRT-POSE <https://github.com/NVIDIA-AI-IOT/trt_pose/tree/master>
