@@ -11,9 +11,10 @@ layout: post
 
 ## Content
 1. Introduction
-2. Methodology
-3. Data collection
-4. Data processing
+2. Code preparation
+3. Data collection and preprocessing
+4. Data Labeling
+5. Model training and inference
 
 ## Introduction
 
@@ -141,8 +142,9 @@ yolo predict model=yolov8n.pt source='https://ultralytics.com/images/bus.jpg'
 And check the results under "./runs/detect/predict".
 
 
-#### 2. Install PyTorch 
-In case PyTorch installation fails.
+#### 2. Alternative way to install PyTorch 
+> In case PyTorch installation fails.
+{: .prompt-info }
 
 Download PyTorch wheel file from this [link](https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048).
 
@@ -161,6 +163,13 @@ Then install PyTorch by:
 python3 -m pip install --upgrade pip; python3 -m pip install aiohttp numpy=='1.19.4' scipy=='1.5.3' export "LD_LIBRARY_PATH=/usr/lib/llvm-8/:$LD_LIBRARY_PATH"; python3 -m pip install --upgrade protobuf; python3 -m pip install --no-cache $TORCH_INSTALL
 ```
 
+## Data Labeling
+We will use [Roboflow](https://roboflow.com/), an online image annotation platform, to label our data.
+
+
+
+
+## Model Training and Inference
 
 
 
