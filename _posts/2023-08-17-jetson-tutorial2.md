@@ -17,7 +17,7 @@ layout: post
 
 ## Introduction
 
-![Desktop View](/assets/img/post/2023-08-18-trt-pose-demo.gif){: width="480" height="480" }
+![Desktop View](/assets/img/post/2023-08-21-yolo-demo.gif){: width="480" height="480" }
 _Object Detection using YOLOV8 demo_
 
 This tutorial aims to provide a starter project for image data collection for object detection using Jetson Nano and a Web camera. 
@@ -72,7 +72,7 @@ Open the ".bashrc" file under home directory, and type `export OPENBLAS_CORETYPE
 
 If you can not find ".bashrc", it is because it is a hidden file. To make it appear, follow this [guide](https://www.makeuseof.com/view-hidden-files-and-folders-linux/#:~:text=By%20default%2C%20your%20file%20manager,files%20on%20Linux%20as%20well.)
 
-Then source .bashrc in terminal:
+Then source .bashrc in the terminal:
 ```bash
 source ~/.bashrc
 ```
@@ -103,7 +103,16 @@ source ./your_env_name/bin/activate
 pip install ultralytics
 ```
 
-#### 2. Install PyTorch
+You can test if the packages are installed sucessfully by running the following command:
+```bash
+yolo predict model=yolov8n.pt source='https://ultralytics.com/images/bus.jpg'
+```
+
+And check the results under "./runs/detect/predict".
+
+
+#### 2. Install PyTorch 
+In case PyTorch installation fails.
 
 Download PyTorch wheel file from this [link](https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048).
 
@@ -123,14 +132,6 @@ python3 -m pip install --upgrade pip; python3 -m pip install aiohttp numpy=='1.1
 ```
 
 
-#### 3. Install other dependencies:
-```bash
-pip install tqdm cython pycocotools
-sudo apt-get install python3-matplotlib
-```
-#### 4. Model inference
-
-
 
 
 
@@ -138,3 +139,5 @@ sudo apt-get install python3-matplotlib
 - TRT-POSE <https://github.com/NVIDIA-AI-IOT/trt_pose/tree/master>
 - Install PyTorch in Jetson <https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html>
 - YOLO-v8 architecture <https://github.com/ultralytics/ultralytics/issues/189>
+- YOLOV8 demo with Jetson Nano <https://wiki.seeedstudio.com/YOLOv8-DeepStream-TRT-Jetson/>
+- 
