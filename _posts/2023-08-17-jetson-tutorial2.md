@@ -174,7 +174,7 @@ For example, we can download the dataset under "./data" folder.
 ![Desktop View](/assets/img/post/2023-08-21-dataset.png){: width="640" height="540" }
 _Content of dataset folder_
 
-The "data.yaml" file is a configuration file that sets up the label names and dataset paths. An example of it is like the following:
+The "data.yaml" file is a configuration file that sets up the label names and dataset paths. An example of it is the following:
 
 ```yaml
 train: ../train/images
@@ -192,6 +192,12 @@ roboflow:
   url: https://app.roboflow.com/xmagical/hard-hat-sample-jebrb/1
 ```
 
+We may have to change the train, val, and test path to an absolute form in the data.yaml, for example:
+```yaml
+train: ~/Downloads/data//Hard Hat Sample.v1-raw.yolov8/train/images
+val: ../Downloads/data//Hard Hat Sample.v1-raw.yolov8//images
+test: ../Downloads/data//Hard Hat Sample.v1-raw.yolov8//images
+```
 
 ## Model Training and Inference
 We will utilize the training pipeline provided by Ultralytics.
