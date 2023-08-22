@@ -130,13 +130,15 @@ We will use [Roboflow](https://roboflow.com/), an online image annotation platfo
 
 Sign up for an account and create a project. Then we can start uploading the collected from Jetson Nano. 
 
-![Desktop View](/assets/img/post/2023-08-21-roboflow-upload.png){: width="480" height="480" }
+![Desktop View](/assets/img/post/2023-08-21-roboflow-upload.png){: width="640" height="480" }
 _Upload the collected images_
 
 After uploading the images, assign annotation tasks to your team members and we can now start annotating. 
 
-![Desktop View](/assets/img/post/2023-08-21-roboflow-annotate.png){: width="480" height="480" }
-_Annotate the uploaded images _
+![Desktop View](/assets/img/post/2023-08-21-roboflow-annotate.png){: width="640" height="540" }
+_Annotate the uploaded images_
+
+We can use the "box" to crop an object such as the helmet and create a label for it. 
 
 
 
