@@ -59,6 +59,9 @@ We will first make sure we can receive images from the web camera using opencv-p
 ### Camera Installation
 Connect the web camera to Jetson Nano through USB port.
 
+![Desktop View](/assets/img/post/2023-08-21-install-webcam.jpg){: width="480" height="640" }
+_Install the web camera_
+
 Open the ".bashrc" file under home directory, and type `export OPENBLAS_CORETYPE=ARMV8` at the end of the file. 
 
 If you can not find ".bashrc", it is because it is a hidden file. To make it appear, follow this [guide](https://www.makeuseof.com/view-hidden-files-and-folders-linux/#:~:text=By%20default%2C%20your%20file%20manager,files%20on%20Linux%20as%20well.)
@@ -287,7 +290,6 @@ model = YOLO("/path/to/runs/detect/train1/weights/best.pt")
 
 # predict and save result
 result = model.predict(source=test_image_path, save=True, imgsz=384, conf=0.5)
-
 ```
 
 ## Reference
