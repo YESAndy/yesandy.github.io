@@ -258,7 +258,7 @@ After starting the training, the program may ask you to log into [wandb](https:/
 
 Sign up for an account on wandb website, and go to "User Settings". Find "API key" section and copy the API key:
 
-![Desktop View](/assets/img/post/2023-08-21-wandb-keyapi.png){: width="640" height="540" }
+![Desktop View](/assets/img/post/2023-08-21-wandb-apikey.png){: width="640" height="540" }
 _Get API key from wandb_
 
 Enter the API key in the terminal if required. 
