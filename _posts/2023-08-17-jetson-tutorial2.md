@@ -78,7 +78,7 @@ source ~/.bashrc
 ```
 
 Now we can test image capture using OpenCV package by the following script:
-```Python
+```python
 import cv2
 
 cam = cv2.VideoCapture(0)
