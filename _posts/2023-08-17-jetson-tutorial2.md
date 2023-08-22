@@ -140,6 +140,28 @@ _Annotate the uploaded images_
 
 We can use the "box" to crop an object such as the helmet and create a label for it. 
 
+After the annotation, we can now generate the dataset!
+
+First, split the dataset into training, validation, and testing. Commonly, the ratios are around 7:2:1.
+
+Then, add data preprocessing (e.g., cropping) and augmentation (e.g., blur and rotation). 
+
+Finally, just click on "generate" to generate a version of the dataset. 
+
+In the "version" section, select an annotation format (e.g., YOLOv8) and click on "Get Snippet".
+
+There are two ways to download the dataset. First, we can just download a zip file and extract it to a local folder. Second, we can download it by running a script copied from the snippet like the following:
+
+```python
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="SUWxwWJf88eAaWZdhWnx")
+project = rf.workspace("xmagical").project("hard-hat-sample-jebrb")
+dataset = project.version(2).download("yolov8")
+```
+
+
 
 
 ## Model Training and Inference
