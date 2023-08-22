@@ -21,7 +21,7 @@ layout: post
 ![Desktop View](/assets/img/post/2023-08-21-yolo-demo.gif){: width="480" height="480" }
 _Object Detection using YOLOV8 demo_
 
-This tutorial aims to provide a starter project for image data collection for object detection using Jetson Nano and a Web camera. 
+This tutorial aims to provide a starter project for image data collection for Hard Hat detection using Jetson Nano and a Web camera. 
 
 There are many other interesting projects from [Jetson Community](https://developer.nvidia.com/embedded/community/jetson-projects?page=1). 
 
@@ -125,6 +125,17 @@ cv2.destroyAllWindows()
 
 
 
+## Data Labeling
+We will use [Roboflow](https://roboflow.com/), an online image annotation platform, to label our data. 
+
+Sign up for an account and create a project. Then we can start uploading the collected from Jetson Nano. 
+
+
+
+
+## Model Training and Inference
+We will utilize the training pipeline provided by Ultralytics.
+
 ### Install Ultralytics package and other dependencies
 
 #### 1. Install Ultralytics
@@ -162,14 +173,6 @@ Then install PyTorch by:
 ```bash
 python3 -m pip install --upgrade pip; python3 -m pip install aiohttp numpy=='1.19.4' scipy=='1.5.3' export "LD_LIBRARY_PATH=/usr/lib/llvm-8/:$LD_LIBRARY_PATH"; python3 -m pip install --upgrade protobuf; python3 -m pip install --no-cache $TORCH_INSTALL
 ```
-
-## Data Labeling
-We will use [Roboflow](https://roboflow.com/), an online image annotation platform, to label our data.
-
-
-
-
-## Model Training and Inference
 
 
 
