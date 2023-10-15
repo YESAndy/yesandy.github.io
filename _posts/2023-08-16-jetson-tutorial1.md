@@ -9,9 +9,6 @@ toc: true
 layout: post
 ---
 
-## Content
-1. Jetson Nano setup
-2. Camera setup
 
 
 ## Jetson Nano Setup
@@ -162,6 +159,8 @@ Connect a keyboard, a mouse, and a monitor to Jetson Nano.
 
 Follow the guide to complete Ubuntu installation.
 
+### Connect to ubcsecure
+Follow the official guide <https://ubc.service-now.com/kb_view.do?sysparm_article=KB0013556>.
 
 ## Reference
 - Jetson Nano Specs <https://developer.nvidia.com/embedded/jetson-nano-developer-kit>
