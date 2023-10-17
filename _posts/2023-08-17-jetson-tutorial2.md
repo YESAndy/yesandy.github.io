@@ -42,7 +42,7 @@ sudo apt install libpython3.8-dev
 To create a virtual environment, run:
 ```bash
 cd $YOUR_PROJECT_DIRECTORY
-virtualenv your_env_name python=3.8
+virtualenv your_env_name --python=python3.8
 ```
 
 To activate the created virtual environment, run:
