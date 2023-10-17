@@ -290,6 +290,8 @@ model = YOLO("/path/to/runs/detect/train1/weights/best.pt")
 result = model.predict(source=test_image_path, save=True, imgsz=384, conf=0.5)
 ```
 
+Here we provide a trained model for RickRoll detection, download the model by this link <https://github.com/YESAndy/yesandy.github.io/blob/main/_data/rickroll_best.pt>
+
 ## Reference
 - TRT-POSE <https://github.com/NVIDIA-AI-IOT/trt_pose/tree/master>
 - Install PyTorch in Jetson <https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html>
