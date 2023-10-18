@@ -6,6 +6,7 @@ categories: [tutorial]
 tags: [jetson]     # TAG names should always be lowercase
 math: true
 toc: true
+mermaid: true
 layout: post
 ---
 
@@ -334,18 +335,19 @@ cv2.destroyAllWindows()
 
 ```
 ## Ubuntu command cheatsheet
-| Description                      | Command          | Example |
-|:-----------------------------|:-----------------|------------:|
-| Parameter sign         | $     |                               |
-| Change directory              | cd $directory    |            |
-| List the items in the current directory| ls |               |
-| Create folder         | mkdir folder_name    |             |
-| Execute commands as admin         | sudo     |              |
-| Update Debian package         | sudo apt update     |        |
-| Install Debian package       |  sudo apt install $package_name |     |
-| Check ip address         | ifconfig               |            |
-| Assign parameter value   | export someparameter=somevalue      | export CUDA_HOME=/usr/local/cuda    |
-| Print out parameters     | echo $someparameter   | echo $CUDA_HOME   |
+
+| Description                             | Command                        | Example                          |
+|:----------------------------------------|:-------------------------------|---------------------------------:|
+| Parameter sign                          | $                              |                                  |
+| Change directory                        | cd $directory                  |                                  |
+| List the items in the current directory | ls                             |                                  |
+| Create folder                           | mkdir folder_name              |                                  |
+| Execute commands as admin               | sudo                           |                                  |
+| Update Debian package                   | sudo apt update                |                                  |
+| Install Debian package                  | sudo apt install $package_name |                                  |
+| Check ip address                        | ifconfig                       |                                  |
+| Assign parameter value                  | export someparameter=somevalue | export CUDA_HOME=/usr/local/cuda |
+| Print out parameters                    | echo $someparameter            | echo $CUDA_HOME                  |
 
 ## Reference
 - TRT-POSE <https://github.com/NVIDIA-AI-IOT/trt_pose/tree/master>
