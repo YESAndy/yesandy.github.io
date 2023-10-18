@@ -255,7 +255,11 @@ export TORCH_INSTALL=path/to/torch-1.10.0-cp36-cp36m-linux_aarch64.whl
 
 Then install PyTorch by:
 ```bash
-python3 -m pip install --upgrade pip; python3 -m pip install aiohttp numpy=='1.19.4' scipy=='1.5.3' export "LD_LIBRARY_PATH=/usr/lib/llvm-8/:$LD_LIBRARY_PATH"; python3 -m pip install --upgrade protobuf; python3 -m pip install --no-cache $TORCH_INSTALL
+python3 -m pip install --upgrade pip
+python3 -m pip install aiohttp numpy=='1.19.4' scipy=='1.5.3'
+export "LD_LIBRARY_PATH=/usr/lib/llvm-8/:$LD_LIBRARY_PATH"
+python3 -m pip install --upgrade protobuf
+python3 -m pip install --no-cache $TORCH_INSTALL
 ```
 
 ### Train your model
