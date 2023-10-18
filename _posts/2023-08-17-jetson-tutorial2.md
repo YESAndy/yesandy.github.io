@@ -118,10 +118,9 @@ while True:
   cv2.imshow("video", frame)
 
   key = cv2.waitKey(1)
-  if key == 27:  # 27 mean ESC in keyboard
-    break
-  elif key == 32:  # 32 means space
+  if key == 32:  # 32 means space
     cv2.imwrite(f"{file_root}/{count}.png", frame) # save images
+    count = count + 1
 
 cam.release()
 cv2.destroyAllWindows()
