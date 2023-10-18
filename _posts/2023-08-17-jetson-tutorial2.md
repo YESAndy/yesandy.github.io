@@ -338,7 +338,7 @@ cv2.destroyAllWindows()
 | Parameter sign         | $     |
 | Change directory              | cd $directory    |            |
 | List the items in the current directory| ls |               |
-| Create folder         | mkdir $folder_name    |             |
+| Create folder         | mkdir folder_name    |             |
 | Execute commands as admin         | sudo     |              |
 | Update Debian package         | sudo apt update     |        |
 | Install Debian package       |  sudo apt install $package_name    |     |
