@@ -41,7 +41,6 @@ sudo apt install libpython3.8-dev
 
 To create a virtual environment, run:
 ```bash
-cd $YOUR_PROJECT_DIRECTORY
 virtualenv your_env_name --python=python3.8
 ```
 
@@ -226,7 +225,8 @@ We will utilize the training pipeline provided by Ultralytics.
 Open a terminal, and activate the created virtual environment:
 ```bash
 source ./your_env_name/bin/activate
-pip install ultralytics
+pip install torch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1
+pip install ultralytics==8.0.159
 ```
 
 You can test if the packages are installed successfully by running the following command:
