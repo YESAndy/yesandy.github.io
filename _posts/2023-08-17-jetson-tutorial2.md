@@ -93,7 +93,6 @@ source ./your_env_name/bin/activate
 
 ```bash
 sudo apt update
-sudo apt install v4t-utils
 pip install opencv-python
 ```
 
@@ -333,6 +332,21 @@ cam.release()
 cv2.destroyAllWindows()
 
 ```
+## Ubuntu command cheatsheet
+| Description                      | Command          | Example |
+|:-----------------------------|:-----------------|------------:|
+| Parameter sign         | $     |
+| Change directory              | cd $directory    |            |
+| List the items in the current directory| ls |               |
+| Create folder         | mkdir $folder_name    |             |
+| Execute commands as admin         | sudo     |              |
+| Update Debian package         | sudo apt update     |        |
+| Install Debian package       |  sudo apt install $package_name    |     |
+| Check ip address         | ifconfig     |            |
+| Assign parameter value   | export someparameter=somevalue      | export CUDA_HOME=/usr/local/cuda    |
+| Print out parameters     | echo $someparameter   | echo $CUDA_HOME   |
+
+![image](https://github.com/YESAndy/yesandy.github.io/assets/35024963/daf4c22b-51d2-4aa2-aaba-e910bab37433)
 
 ## Reference
 - TRT-POSE <https://github.com/NVIDIA-AI-IOT/trt_pose/tree/master>
