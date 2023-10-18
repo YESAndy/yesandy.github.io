@@ -346,8 +346,6 @@ cv2.destroyAllWindows()
 | Assign parameter value   | export someparameter=somevalue      | export CUDA_HOME=/usr/local/cuda    |
 | Print out parameters     | echo $someparameter   | echo $CUDA_HOME   |
 
-![image](https://github.com/YESAndy/yesandy.github.io/assets/35024963/daf4c22b-51d2-4aa2-aaba-e910bab37433)
-
 ## Reference
 - TRT-POSE <https://github.com/NVIDIA-AI-IOT/trt_pose/tree/master>
 - Install PyTorch in Jetson <https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html>
