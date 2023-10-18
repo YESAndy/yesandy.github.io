@@ -314,8 +314,9 @@ To do realtime inference, here is a demo script:
 import cv2
 from ultralytics import YOLO
 
+file_root = "/path/to/file/root/"
 # initiate yolo model
-model = YOLO("yolov8n.pt")
+model = YOLO(file_root+"/yolov8n.pt")
 
 # 0 means /dev/video0, you may adjust this value if you have another camera.
 cam = cv2.VideoCapture(0)
