@@ -71,6 +71,21 @@ source ~/.bashrc
 
 ### Data acquisition
 
+Create your project folder, in a terminal:
+```bash
+mkdir jetson_project
+```
+Go to the project folder:
+```bash
+cd jetson_project
+```
+
+Create a "data" folder and a "scripts" folder:
+```bash
+mkdir data
+mkdir scripts
+```
+
 #### 1. Install dependencies:
 Open a terminal, activate the created virtual environment,
 ```bash
