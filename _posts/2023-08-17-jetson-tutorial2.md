@@ -310,6 +310,30 @@ result = model.predict(source=test_image_path, save=True, imgsz=384, conf=0.5)
 
 Here we provide a trained model for RickRoll detection, download the model by this link <https://github.com/YESAndy/yesandy.github.io/blob/main/_data/rickroll_best.pt>
 
+To do realtime inference, here is a demo script:
+```bash
+import cv2
+from ultralytics import YOLO
+
+# initiate yolo model
+model = YOLO("yolov8n.pt")
+
+# 0 means /dev/video0, you may adjust this value if you have another camera.
+cam = cv2.VideoCapture(0)
+while True:
+  check, frame = cam.read()
+  results = model.predict(source=frame, conf=0.5)
+  annotated_frame = results[0].plot()
+  cv2.imshow("video", annotated_frame)
+
+  key = cv2.waitKey(1)
+  if key == 27:  # 27 mean ESC in keyboard
+    break
+cam.release()
+cv2.destroyAllWindows()
+
+```
+
 ## Reference
 - TRT-POSE <https://github.com/NVIDIA-AI-IOT/trt_pose/tree/master>
 - Install PyTorch in Jetson <https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html>
