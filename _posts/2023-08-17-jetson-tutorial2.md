@@ -337,7 +337,7 @@ cv2.destroyAllWindows()
 ## Ubuntu command cheatsheet
 
 | Description                             | Command                        | Example                          |
-|:----------------------------------------|:-------------------------------|---------------------------------:|
+|:----------------------------------------|:-------------------------------|:---------------------------------|
 | Parameter sign                          | $                              |                                  |
 | Change directory                        | cd $directory                  |                                  |
 | List the items in the current directory | ls                             |                                  |
