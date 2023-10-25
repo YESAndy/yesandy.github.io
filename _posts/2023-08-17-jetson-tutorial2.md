@@ -354,4 +354,5 @@ cv2.destroyAllWindows()
 - Install PyTorch in Jetson <https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html>
 - YOLO-v8 architecture <https://github.com/ultralytics/ultralytics/issues/189>
 - YOLOV8 demo with Jetson Nano <https://wiki.seeedstudio.com/YOLOv8-DeepStream-TRT-Jetson/>
+- YOLO-V8 train your model with customized dataset <https://blog.roboflow.com/how-to-train-yolov8-on-a-custom-dataset/>
 
