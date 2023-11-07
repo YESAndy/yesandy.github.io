@@ -33,7 +33,13 @@ Since they are time-series data, we can use logistic regression to predict the v
 
 ## Sensor Installation
 
+Align the 40-pin connectors between Jetson Nano and the sensor:
 
+![Desktop View](/assets/img/post/2023-11-07-install-env-sensor.jpg){: width="480" height="480" }
+_Environmental sensor installation_
+
+![Desktop View](/assets/img/post/2023-11-07-env-sensor.png){: width="480" height="480" }
+_Environmental sensor installed on Jetson Nano_
 
 ## Code Preparation
 Install dependencies:
