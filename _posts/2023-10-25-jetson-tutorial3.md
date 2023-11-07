@@ -42,21 +42,21 @@ _Environmental sensor installation_
 _Environmental sensor installed on Jetson Nano_
 
 ## Code Preparation
-Install dependencies:
+### Install dependencies
 ```bash
 sudo apt-get install python-smbus
 sudo -H apt-get install python-pil
 sudo apt-get install i2c-tools
 ```
 
-Download the data collection package:
+### Download the data collection package:
 ```bash
 sudo apt-get install p7zip-full
 wget https://files.waveshare.com/upload/f/f5/Environment_sensor_fot_jetson_nano_rev3.zip
 7z x Environment_sensor_fot_jetson_nano.7z  -r -o./Environment_sensor_fot_jetson_nano
 ```
 
-Test the package
+### Test the package
 ```bash
 cd Environment_sensor_fot_jetson_nano
 sudo python test.py
@@ -69,5 +69,6 @@ _Sensor outputs on the screen_
 
 
 
-
+## Reference
+sensor wiki <https://www.waveshare.com/wiki/Environment_Sensor_for_Jetson_Nano#How_to_use>
 
