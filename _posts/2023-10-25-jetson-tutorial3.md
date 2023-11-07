@@ -65,8 +65,14 @@ If everything is done, the screen will visualize the sensor outputs:
 ![Desktop View](/assets/img/post/2023-11-07-sensor-viz.png){: width="480" height="480" }
 _Sensor outputs on the screen_
 
-
-
+`test.py` visualizes all sensor outputs. There are other scripts for a single reading of the sensor signal:
+| Sensor                          | Script      | Note                              |
+|:--------------------------------|:------------|:----------------------------------|
+| Ambient light Sensor            | TSL2591.py  |                                   |
+| Temperature and Humidity Sensor | BME280.py   |                                   |
+| 9-AXIS Sensor                   | ICM20948.py |                                   |
+| IR/UV Sensor                    | LTR390.py   |                                   |
+| VOC Sensor                      | SGP40.py    | 0 to 1,000 ppm ethanol equivalent |
 
 
 ## Reference
