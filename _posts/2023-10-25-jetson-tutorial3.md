@@ -66,6 +66,7 @@ If everything is done, the screen will visualize the sensor outputs:
 _Sensor outputs on the screen_
 
 `test.py` visualizes all sensor outputs. There are other scripts for a single reading of the sensor signal:
+
 | Sensor                          | Script      | Note                              |
 |:--------------------------------|:------------|:----------------------------------|
 | Ambient light Sensor            | TSL2591.py  |                                   |
