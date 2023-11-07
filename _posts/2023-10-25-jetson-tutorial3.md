@@ -31,3 +31,37 @@ for which we can put them in a table. For example,
 
 Since they are time-series data, we can use logistic regression to predict the values we want. For example, use temperature to predict humidity. 
 
+## Sensor Installation
+
+
+
+## Code Preparation
+Install dependencies:
+```bash
+sudo apt-get install python-smbus
+sudo -H apt-get install python-pil
+sudo apt-get install i2c-tools
+```
+
+Download the data collection package:
+```bash
+sudo apt-get install p7zip-full
+wget https://files.waveshare.com/upload/f/f5/Environment_sensor_fot_jetson_nano_rev3.zip
+7z x Environment_sensor_fot_jetson_nano.7z  -r -o./Environment_sensor_fot_jetson_nano
+```
+
+Test the package
+```bash
+cd Environment_sensor_fot_jetson_nano
+sudo python test.py
+```
+If everything is done, the screen will visualize the sensor outputs:
+![Desktop View](/assets/img/post/2023-11-07-sensor-viz.png){: width="480" height="480" }
+_Sensor outputs on the screen_
+
+
+
+
+
+
+
