@@ -154,7 +154,7 @@ try:
     print(f"motion data: roll {roll}, pitch {pitch}, yaw {yaw}")
 
 except KeyboardInterrupt:
-	print("exit")
+  print("exit")
 
 ```
 
