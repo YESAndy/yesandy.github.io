@@ -47,6 +47,7 @@ _Environmental sensor installed on Jetson Nano_
 sudo apt-get install python-smbus
 sudo -H apt-get install python-pil
 sudo apt-get install i2c-tools
+sudo apt-get install python3-tk
 ```
 
 ### Download the data collection package:
@@ -218,7 +219,9 @@ import numpy as np
 
 # read pickle data 
 filepath = "./data.pkl"
-data = pickle.load(filepath)
+datafile = open(filepath, 'rb')
+data = pickle.load(datafile)
+datafile.close()
 
 temp = np.array(data['temperature'])
 hum = np.array(data['humidity'])
@@ -252,12 +255,20 @@ from sklearn.linear_model import LinearRegression
 import numpy as np
 import pandas as pd
 
-# read csv data as dataframe
-filepath = "/path/to/data.csv"
-df = pd.read_csv(filepath)
+# read pickle data 
+filepath = "./data.pkl"
+datafile = open(filepath, 'rb')
+data = pickle.load(datafile)
+datafile.close()
 
-X = df[['humidity', 'pressure']].values
-y = df['temperature'].values
+temp = np.array(data['temperature'])
+hum = np.array(data['humidity'])
+pressure = np.array(data['pressure'])
+
+X = np.zeros((2, len(temp)))
+X[0] = hum
+X[1] = pressure
+y = temp
 
 # fit the data
 reg = LinearRegression().fit(X, y)
