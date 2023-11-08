@@ -75,7 +75,7 @@ _Sensor outputs on the screen_
 | IR/UV Sensor                    | LTR390.py   |                                   |
 | VOC Sensor                      | SGP40.py    | 0 to 1,000 ppm ethanol equivalent |
 
-Take a closer look at the `test.py`:
+Take a closer look at the sensor reading parts of the `test.py`:
 
 ```python
 #!/usr/bin/python
