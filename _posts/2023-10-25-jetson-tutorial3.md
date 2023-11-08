@@ -230,6 +230,11 @@ Lets train a linear regression model to predict temperature from pressure and hu
 
 We will use Linear Regression model from the Scikit-learn package. 
 
+### split dataset into training and testing
+
+
+### Training
+
 ```python
 from sklearn.linear_model import LinearRegression
 import numpy as np
@@ -250,6 +255,8 @@ print(reg.score(X, y))
 
 # check coefficient and intercept
 print(reg.coef_, reg.intercept_)
+
+#
 
 ```
 
