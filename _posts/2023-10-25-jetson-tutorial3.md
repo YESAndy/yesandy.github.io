@@ -200,9 +200,35 @@ df.to_csv(filepath)
 
 ```
 
-### Model Training and Inference
-We use Linear Regression model from Scikit-learn package.
+### Model Training and Prediction
 
+Lets train a linear regression model to predict temperature from pressure and humidity.
+
+We will use Linear Regression model from the Scikit-learn package. 
+
+```python
+from sklearn.linear_model import LinearRegression
+import numpy as np
+import pandas as pd
+
+# read csv data as dataframe
+filepath = "/path/to/data.csv"
+df = pd.read_csv(filepath)
+
+X = df[['humidity', 'pressure']].values
+y = df['temperature'].values
+
+# fit the data
+reg = LinearRegression().fit(X, y)
+
+# check the R**2 score
+print(reg.score(X, y))
+
+# check coefficient and intercept
+print(reg.coef_, reg.intercept_)
+
+
+```
 
 
 ## Reference
