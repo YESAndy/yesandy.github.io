@@ -217,6 +217,7 @@ Activate the virtual environment
 ```bash
 source ./myjetson/bin/activate
 pip install matplotlib
+```
 
 ```python
 import matplotlib.pyplot as plt
