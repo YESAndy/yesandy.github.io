@@ -109,38 +109,59 @@ print("MPU9255 9-DOF I2C address:0X68")
 oled = SH1106.SH1106()
 print("OLED I2C address:0x3c")
 
+# Initiate empty data containers
+
+
 try:
   print("Comprehensive test program...")
   print("please Enter ctrl+c to end program")
 
+
+
   while True:
-    x = x + 1
-    time.sleep(0.2)
+    time.sleep(0.2) # stop for 0.2 sec before every reading
     bme = []
     bme = bme280.readData()
     pressure = round(bme[0], 2) 
     temp = round(bme[1], 2) 
     hum = round(bme[2], 2)
+
+    print(f"pressure {pressure} kPa")
+    print(f"temperature {temp} Celsius degree")
+    print(f"humidity {hum} rh")
     
     lux = round(light.Lux(), 2)
-    
-    # uv = round(uv.UVS(), 2) 
+
+    print(f"lux {lux}")
+
     uvdata = uv.UVS()
-    # ir = round(uv.readdata()[1], 2)
+    uv = round(uv.UVS(), 2) 
+    ir = round(uv.readdata()[1], 2)
+
+    print(f"uv {uvdata}")
+    print(f"ir {ir}")
           
     gas = round(sgp.raw(), 2)
+
+    print(f"gas {gas}")
     
     icm = []
     icm = MPU9255.getdata()
-    # roll = round(icm[0], 2)
-    # pitch = round(icm[1], 2)
-    # yaw = round(icm[2], 2)
+    roll = round(icm[0], 2)
+    pitch = round(icm[1], 2)
+    yaw = round(icm[2], 2)
+
+    print(f"motion data: roll {roll}, pitch {pitch}, yaw {yaw}")
 
 except KeyboardInterrupt:
 	print("exit")
 
 ```
 
+## Data Collection and Preprocessing
+
+### Data collection
+We take the BME280 sensor as an example to collect temperature, humidity, and pressure data. 
 
 
 
