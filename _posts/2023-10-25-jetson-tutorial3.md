@@ -199,9 +199,27 @@ df.to_csv(filepath)
 ```
 
 ### Data visualization
-```python
+We will use matplotlib to visualize the distribution of the collected data.
 
+```python
 import matplotlib.pyplot as plt
+
+# read csv data as dataframe
+filepath = "/path/to/data.csv"
+df = pd.read_csv(filepath)
+
+temp = df['temperature'].values
+hum = df['humidity'].values
+pressure = df['pressure'].values
+
+t = np.arange(len(temp))
+
+plt.plot(t, temp, label="temp")
+plt.plot(t, hum, label="hum")
+plt.plot(t, pressure, label="pressure")
+
+plt.legend()
+plt.show()
 
 ```
 
