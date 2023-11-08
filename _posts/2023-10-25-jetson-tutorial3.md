@@ -87,7 +87,6 @@ import BME280   #Atmospheric Pressure/Temperature and humidity
 import LTR390   #UV
 import TSL2591  #LIGHT
 import SGP40
-from PIL import Image,ImageDraw,ImageFont
 import math
 import os
 
@@ -160,8 +159,49 @@ except KeyboardInterrupt:
 
 ## Data Collection and Preprocessing
 
+
+
 ### Data collection
 We take the BME280 sensor as an example to collect temperature, humidity, and pressure data. 
+```python
+#!/usr/bin/python
+# -*- coding:utf-8 -*-
+import time
+import BME280   #Atmospheric Pressure/Temperature and humidity
+import pandas as pd
+
+# initiate pandas dataframe as the data container
+df = d.DataFrame(columns=['humidity', 'temperature', 'pressure'])
+
+
+# Record a 5-second data
+duration = 5
+start_time = time.time()
+current_time = time.time()
+count_row = 0
+
+while current_time - start_time < 5:
+
+  # read sensor data
+  time.sleep(0.2) # stop for 0.2 sec before every reading
+  bme = []
+  bme = bme280.readData()
+  pressure = round(bme[0], 2) 
+  temp = round(bme[1], 2) 
+  hum = round(bme[2], 2)
+
+  # record the data in dataframe
+  df.loc[count_row] = [hum, temp, pressure]
+  count_row = count_row + 1
+
+# save dataframe to csv file
+filepath = "/path/to/data.csv"
+df.to_csv(filepath) 
+
+```
+
+### Model Training and Inference
+We use Linear Regression model from Scikit-learn package.
 
 
 
