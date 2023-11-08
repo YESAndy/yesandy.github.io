@@ -174,7 +174,7 @@ bme280 = BME280.BME280()
 bme280.get_calib_param()
 print("bme280 T&H I2C address:0X76")
 
-# initiate pandas dataframe as the data container
+# initiate the data container as dictionary
 data = {'humidity':[], 'temperature':[], 'pressure':[]}
 
 
@@ -213,14 +213,16 @@ We will use matplotlib to visualize the distribution of the collected data.
 
 ```python
 import matplotlib.pyplot as plt
+import pickle
+import numpy as np
 
-# read csv data as dataframe
-filepath = "/path/to/data.csv"
-df = pd.read_csv(filepath)
+# read pickle data 
+filepath = "./data.pkl"
+data = pickle.load(filepath)
 
-temp = df['temperature'].values
-hum = df['humidity'].values
-pressure = df['pressure'].values
+temp = np.array(data['temperature'])
+hum = np.array(data['humidity'])
+pressure = np.array(data['pressure'])
 
 t = np.arange(len(temp))
 
