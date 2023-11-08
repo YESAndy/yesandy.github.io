@@ -94,7 +94,7 @@ import os
 os.system('i2cdetect -y -r 1')
 # time.sleep(1)
 
-
+# initiate sensor readers
 bme280 = BME280.BME280()
 bme280.get_calib_param()
 print("bme280 T&H I2C address:0X76")
@@ -110,17 +110,12 @@ oled = SH1106.SH1106()
 print("OLED I2C address:0x3c")
 
 try:
-	
-	print("Comprehensive test program...")
-	print("please Enter ctrl+c to end program")
-	image = Image.new('1', (oled.width, oled.height), "BLACK")
-	draw = ImageDraw.Draw(image)
-	
-	x = 0
-	font = ImageFont.truetype('Font.ttc', 10)
-	while True:
-		x = x + 1
-		time.sleep(0.2)
+  print("Comprehensive test program...")
+  print("please Enter ctrl+c to end program")
+
+  while True:
+    x = x + 1
+    time.sleep(0.2)
     bme = []
     bme = bme280.readData()
     pressure = round(bme[0], 2) 
@@ -134,7 +129,7 @@ try:
     # ir = round(uv.readdata()[1], 2)
           
     gas = round(sgp.raw(), 2)
-
+    
     icm = []
     icm = MPU9255.getdata()
     # roll = round(icm[0], 2)
