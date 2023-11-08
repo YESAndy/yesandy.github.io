@@ -159,8 +159,6 @@ except KeyboardInterrupt:
 
 ## Data Collection and Preprocessing
 
-
-
 ### Data collection
 We take the BME280 sensor as an example to collect temperature, humidity, and pressure data. 
 ```python
@@ -200,7 +198,15 @@ df.to_csv(filepath)
 
 ```
 
-### Model Training and Prediction
+### Data visualization
+```python
+
+import matplotlib.pyplot as plt
+
+```
+
+
+## Model Training and Prediction
 
 Lets train a linear regression model to predict temperature from pressure and humidity.
 
@@ -226,7 +232,6 @@ print(reg.score(X, y))
 
 # check coefficient and intercept
 print(reg.coef_, reg.intercept_)
-
 
 ```
 
