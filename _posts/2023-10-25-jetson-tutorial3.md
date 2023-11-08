@@ -212,6 +212,12 @@ datafile.close()
 ### Data visualization
 We will use matplotlib to visualize the distribution of the collected data.
 
+Activate the virtual environment
+
+```bash
+source ./myjetson/bin/activate
+pip install matplotlib
+
 ```python
 import matplotlib.pyplot as plt
 import pickle
