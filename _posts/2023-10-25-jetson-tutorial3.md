@@ -77,7 +77,7 @@ _Sensor outputs on the screen_
 
 Take a closer look at the `test.py`:
 
-```Python
+```python
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 import time
