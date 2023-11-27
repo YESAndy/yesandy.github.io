@@ -78,7 +78,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "https://en.wikipedia.org/wiki/File:Utada_Hikaru_-_One_Last_Kiss.png"
+avatar: "https://upload.wikimedia.org/wikipedia/en/7/70/Utada_Hikaru_-_One_Last_Kiss.png"
 
 # boolean type, the global switch for TOC in posts.
 toc: true
