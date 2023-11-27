@@ -78,7 +78,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "https://github.com/YESAndy/yesandy.github.io/blob/main/assets/img/commons/niuyeye.jpeg"
+avatar: "https://cdn.vox-cdn.com/thumbor/34mZ1UI9fJr3FrGdQej-BZXDIso=/0x0:1920x1080/1820x1213/filters:focal(628x436:934x742):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/72800758/SUB3_PLUTO_EP08_V2_230713.00_43_30_12.026.0.jpg"
 
 # boolean type, the global switch for TOC in posts.
 toc: true
