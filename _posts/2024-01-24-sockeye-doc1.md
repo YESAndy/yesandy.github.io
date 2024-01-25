@@ -57,5 +57,4 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 ## Reference
 - Official Documentation <https://confluence.it.ubc.ca/display/UARC/GPU+Jobs+in+Detail>
-- 
 
