@@ -42,6 +42,17 @@ Create a conda environment from yml file
 conda env create -f environment.yml
 ```
 
+It is the first time to activate conda env under your account, 
+```bash
+conda init bash
+```
+
+Then open a new terminal,
+```bash
+conda activate <your conda env>
+
+```
+
 ## Run a GPU job
 ```bash
 #!/bin/bash
