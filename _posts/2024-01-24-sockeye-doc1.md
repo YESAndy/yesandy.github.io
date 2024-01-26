@@ -23,10 +23,9 @@ Load software:
 module load gcc
 module load cuda
 module load miniconda3
-
 ```
 
-## create your conda environment
+## Create your conda environment
 In a terminal,
 
 ```bash
@@ -34,6 +33,7 @@ module load miniconda3
 module load git
 source ~/.bashrc
 ```
+
 Note that some packages may require git, so also load git
 
 Create a conda environment from yml file
