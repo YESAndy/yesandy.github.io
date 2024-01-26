@@ -37,6 +37,7 @@ source ~/.bashrc
 Note that some packages may require git, so also load git
 
 Create a conda environment from yml file
+
 ```bash
 conda env create -f environment.yml
 ```
