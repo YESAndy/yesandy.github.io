@@ -14,11 +14,13 @@ layout: post
 ## Install and load software
 
 See the available software:
+
 ```bash
 module avail
 ```
 
 Load software:
+
 ```bash
 module load gcc
 module load cuda
@@ -36,13 +38,14 @@ source ~/.bashrc
 
 Note that some packages may require git, so also load git
 
-Create a conda environment from yml file
+Create a conda environment from yml file:
 
 ```bash
 conda env create -f environment.yml
 ```
 
-It is the first time to activate conda env under your account, 
+It is the first time to activate conda env under your account,
+
 ```bash
 conda init bash
 ```
@@ -80,6 +83,7 @@ module load <software_package_2>
 cd $SLURM_SUBMIT_DIR
 
 <gpu_executable>
+
 ```
 
 Submit run_job.sh by:
