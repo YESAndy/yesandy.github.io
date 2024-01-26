@@ -92,6 +92,12 @@ Submit run_job.sh by:
 sbatch run_job.sh
 ```
 
+You can check the running or pending jobs by running this command:
+```bash
+squeue -u <your_CWL> -t RUNNING
+squeue -u <your_CWL> -t PENDING
+```
+
 ## Reference
 - Official Documentation <https://confluence.it.ubc.ca/display/UARC/GPU+Jobs+in+Detail>
 
