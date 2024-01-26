@@ -50,7 +50,6 @@ conda init bash
 Then open a new terminal,
 ```bash
 conda activate <your conda env>
-
 ```
 
 ## Run a GPU job
@@ -81,10 +80,9 @@ module load <software_package_2>
 cd $SLURM_SUBMIT_DIR
 
 <gpu_executable>
-
 ```
 
-Submit run_job.sh by :
+Submit run_job.sh by:
 
 ```bash
 sbatch run_job.sh
