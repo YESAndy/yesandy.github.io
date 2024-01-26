@@ -22,8 +22,23 @@ Load software:
 ```bash
 module load gcc
 module load cuda
-module load 
+module load miniconda3
 
+```
+
+## create your conda environment
+In a terminal,
+
+```bash
+module load miniconda3
+model load git
+source ~/.bashrc
+```
+Note that some packages may require git, so also load git
+
+Create a conda environment from yml file
+```bash
+conda env create -f environment.yml
 ```
 
 ## Run a GPU job
