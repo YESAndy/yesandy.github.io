@@ -54,6 +54,9 @@ conda activate <your conda env>
 ```
 
 ## Run a GPU job
+
+Create a bash file called run_job.sh:
+
 ```bash
 #!/bin/bash
  
@@ -79,6 +82,12 @@ cd $SLURM_SUBMIT_DIR
 
 <gpu_executable>
 
+```
+
+Submit run_job.sh by :
+
+```bash
+sbatch run_job.sh
 ```
 
 ## Reference
