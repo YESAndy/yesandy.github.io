@@ -31,7 +31,7 @@ In a terminal,
 
 ```bash
 module load miniconda3
-model load git
+module load git
 source ~/.bashrc
 ```
 Note that some packages may require git, so also load git
@@ -58,15 +58,14 @@ conda env create -f environment.yml
 #SBATCH --error=error.txt          
 #SBATCH --mail-user=your.name@ubc.ca
 #SBATCH --mail-type=ALL                               
- 
+
 module load gcc
 module load cuda
 module load <software_package_1>
 module load <software_package_2>
  
 cd $SLURM_SUBMIT_DIR
- 
-export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
 <gpu_executable>
 
 ```
