@@ -99,6 +99,14 @@ squeue -u <your_CWL> -t RUNNING
 squeue -u <your_CWL> -t PENDING
 ```
 
+## Data Transfer
+To download the data from sockeye, use the following command:
+```bash
+scp -r cwl@sockeye.arc.ubc.ca:path local_pat
+```
+
+
+
 ## Reference
 - Official Documentation <https://confluence.it.ubc.ca/display/UARC/GPU+Jobs+in+Detail>
 
