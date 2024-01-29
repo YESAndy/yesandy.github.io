@@ -101,6 +101,7 @@ squeue -u <your_CWL> -t PENDING
 
 ## Data Transfer
 To download the data from sockeye, use the following command:
+
 ```bash
 scp -r cwl@sockeye.arc.ubc.ca:path local_pat
 ```
