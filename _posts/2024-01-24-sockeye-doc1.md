@@ -11,6 +11,12 @@ layout: post
 
 ## Introduction 
 
+## Use vscode to login
+- Open a vscode interface, press `Ctrl+Shift+P` (`Command+Shift+P` for Mac) to open the search bar.
+- In the search bar, search `remote ssh`, then click on `new SSH connection`
+- Type `<cwl-account>@sockeye.ubc.ca` and save the ssh config
+- Connect to sockeye with your CWL password and DUO verification.
+
 
 ## Install and load software
 
