@@ -42,3 +42,13 @@ It can be fixed by adding this to LIBRARY_PATH:
 ```bash
 export LIBRARY_PATH=/cm/shared/apps/cuda11.1/toolkit/11.7.1/lib64/stubs/:$LIBRARY_PATH
 ```
+### CONDA ENV
+To activate conda environment in job bash file:
+
+```bash
+module load anaconda/3-2023.09
+source activate /absolute/path/to/conda/env/
+export PATH=/absolute/path/to/conda/env/bin:$PATH
+
+python <python-to-execute.py>
+```
