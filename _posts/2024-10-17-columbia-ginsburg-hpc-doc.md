@@ -26,3 +26,19 @@ significant modules that needs to be loaded
 
 > Check the version of the loaded modules
 {: .prompt-info }
+
+
+## common issues
+
+### CUDA
+'''console
+/usr/lib/ld or /compiler_compat/ld: cannot find -lcuda: No such file or directory
+'''
+
+This is because the system cannnot find libcuda.so which is normally located under '/cm/shared/apps/cuda11.1/toolkit/11.7.1/lib64/stubs/'. 
+
+It can be fixed by adding this to LIBRARY_PATH:
+
+'''bash
+export LIBRARY_PATH=/cm/shared/apps/cuda11.1/toolkit/11.7.1/lib64/stubs/:$LIBRARY_PATH
+'''
