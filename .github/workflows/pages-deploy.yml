@@ -60,7 +60,7 @@ jobs:
           path: "_site${{ steps.pages.outputs.base_path }}"
           
       - name: Upload artifact
-        # Using the updated upload action v4
+        # Using the updated upload action v3
         uses: actions/upload-artifact@v3
         with:
           name: site
