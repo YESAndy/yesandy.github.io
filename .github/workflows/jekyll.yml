@@ -62,6 +62,12 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+      - name: Upload artifact
+        # Using the updated upload action v3
+        uses: actions/upload-artifact@v3
+        with:
+          name: site
+          path: "_site${{ steps.pages.outputs.base_path }}"
 
 # jobs:
 #   build:
