@@ -83,8 +83,8 @@ jobs:
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
-        # Using the updated upload action v4
-        uses: actions/upload-artifact@v4
+        # Using the updated upload action v3
+        uses: actions/upload-artifact@v3
         with:
           name: site
           path: ./_site
@@ -97,7 +97,7 @@ jobs:
     needs: build
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
           name: site
       - name: Deploy to GitHub Pages
