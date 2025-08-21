@@ -17,35 +17,6 @@ follow [xlerobot](https://xlerobot.readthedocs.io/en/latest/hardware/getting_sta
 ### Assembly
 follow [lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md) assembly processes 
 
-
-> ​
-{: .prompt-info }
-
-### Connect to B2 through cable and WiFi
-There are 5 PCs in B2W for our configuration. PC1 is for low level control, PC2 is for sensors (e.g. LiDAR and RGBD) and SLAM, PC3-PC5 are external board. Here we show how to connect to external board PC5 WiFi. Let say PC0 is the desktop we use to connect to dog.
-
-To access to PC5, we need to open the side cap as shown in the following picture:
-![Desktop View](/assets/img/post/b2w_side.jpg){: width="640" height="540" }
-_B2W side open_
-
-Check the ports using this [link](https://doc-cdn.unitree.com/static/2024/5/28/af187565a0424d858e3653ba92e851e3_2480x2740.png), connect to one of the type C ports to access to PC5. 
-
-Use WiFi dongle to enable wireless connection, may need to download corresponding wifi driver. For example, we use [rtl8821cu](https://github.com/brektrou/rtl8821CU). 
-
-Because the WiFi we connect to asigns different ip address everytime, which requires us to check ip address. To avoid using hdmi cable to connect to PC5 everytime, we can ssh to PC5 using local network through the ethernet port cable connection. 
-
-After connect to the ethernet between PC0 and PC5, we can ssh to PC5 in PC0 by
-
-```bash
-ssh unitree@192.168.123.165
-```
-
-> To ssh to PC5 through wifi ip address, we need to include PC5 user name, like `ssh unitree@10.206.12.1`
-{: .prompt-info }
-
-> Sometimes we ping PC5's ip address but get `Destination Host Unreachable`, one solution is to first `ssh unitree@192.168.123.165`, then ping PC0's ip address in this terminal. Then try ping PC5 ip address again.
-{: .prompt-info }
-
 ## Control
 ### Requirements
 Install lerobot 
