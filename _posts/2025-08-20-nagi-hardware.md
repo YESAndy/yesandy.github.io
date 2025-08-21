@@ -25,6 +25,12 @@ Install lerobot
 pip install 'lerobot[feetech]'
 ```
 
+To ssh into the robot, first check its ip address by the following command in a terminal.
+```bash
+# suppose the robot ip is under this subnet: 192.168.1.x
+sudo nmap -sn 192.168.1.0/24
+```
+
 ### Setup motor ID
 connect to each motor individually, and change their motor IDs using the following code.
 
