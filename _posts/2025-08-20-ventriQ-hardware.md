@@ -1,1 +1,71 @@
+---
+title: VentriQ hardware
+author: andy
+date: 2025-08-20 15:20:00 +/-0080
+categories: [doc]
+tags: [ventriq]     # TAG names should always be lowercase
+math: true
+toc: true
+layout: post
+---
+
+
+## Connect to B2
+### Connect to B2 through App
+For the first time use, we need to bind the remote controller to the dog using App.
+
+Download the UnitreeExplore App, create an account using email. 
+
+Powering On the Remote Control
+> Short press the power button once, then press and hold it for more than 2 seconds. A "beep" sound indicates that the remote control is turned on.​
+{: .prompt-info }
+
+For initial use, the remote control must be bound to the robot via the Unitree Explore App:​
+ - Open the Unitree Explore App and navigate to `Settings` -> `Remote Control Settings`.
+ - Enter the corresponding remote control code to bind it with the robot's data transmission module.
+ - To change the remote control, click `Modify` and follow the prompts.
+ - Establishing Connection:
+   - Once powered on and successfully connected to the B2-W, the data transmission light on the left side of the remote control will be fully lit, indicating a successful connection.​
+
+### Connect to B2 through cable and WiFi
+There are 5 PCs in B2W for our configuration. PC1 is for low level control, PC2 is for sensors (e.g. LiDAR and RGBD) and SLAM, PC3-PC5 are external board. Here we show how to connect to external board PC5 WiFi. Let say PC0 is the desktop we use to connect to dog.
+
+To access to PC5, we need to open the side cap as shown in the following picture:
+![Desktop View](/assets/img/post/b2w_side.jpg){: width="640" height="540" }
+_B2W side open_
+
+Check the ports using this [link](https://doc-cdn.unitree.com/static/2024/5/28/af187565a0424d858e3653ba92e851e3_2480x2740.png), connect to one of the type C ports to access to PC5. 
+
+Use WiFi dongle to enable wireless connection, may need to download corresponding wifi driver. For example, we use [rtl8821cu](https://github.com/brektrou/rtl8821CU). 
+
+Because the WiFi we connect to asigns different ip address everytime, which requires us to check ip address. To avoid using hdmi cable to connect to PC5 everytime, we can ssh to PC5 using local network through the ethernet port cable connection. 
+
+After connect to the ethernet between PC0 and PC5, we can ssh to PC5 in PC0 by
+
+```bash
+ssh unitree@192.168.123.165
+```
+
+> To ssh to PC5 through wifi ip address, we need to include PC5 user name, like `ssh unitree@10.206.12.1`
+{: .prompt-info }
+
+> Sometimes we ping PC5's ip address but get `Destination Host Unreachable`, one solution is to first `ssh unitree@192.168.123.165`, then ping PC0's ip address in this terminal. Then try ping PC5 ip address again.
+{: .prompt-info }
+
+## Control B2
+### Control through remote controller
+Similar to Go1 remote controller
+
+### Control through unitree sdk2 python package
+Follow the instruction of the [unitree_sdk2_python](https://github.com/unitreerobotics/unitree_sdk2_python) package. 
+
+For b2w, use b2w_sport_client.py in examples. 
+
+
+
+## reference
+- [B2 Manual](https://fcc.report/FCC-ID/2A5PE-YUSHU006/7742686.pdf)
+- [unboxing](https://www.youtube.com/watch?v=Q6Za9WDuT-c)
+- [B2 developer manual](https://support.unitree.com/home/en/B2_developer/About%20B2)
+
 
