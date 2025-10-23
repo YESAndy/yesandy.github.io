@@ -11,6 +11,11 @@ layout: post
 
 
 
+# IDF file
+When you use HVACTemplate objects (like
+```HVACTemplate:Zone:VAV```, ```HVACTemplate:Plant:HotWaterLoop```, etc.),
+you’re giving EnergyPlus a high-level, shorthand model.
+
 # Required at run time
 
  - Weather file (EPW): EPW_PATH (absolute path you pass to the CLI).
@@ -75,3 +80,5 @@ Diagnostics (optional: display warnings/extras if you included that block).
 ## Curves
 
 Flat performance curves for DX coil capacity/EIR and PLF (all coefficients = 0 except constant = 1).
+
+
