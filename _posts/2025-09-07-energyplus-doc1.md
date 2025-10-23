@@ -16,6 +16,17 @@ When you use HVACTemplate objects (like
 ```HVACTemplate:Zone:VAV```, ```HVACTemplate:Plant:HotWaterLoop```, etc.),
 you’re giving EnergyPlus a high-level, shorthand model.
 
+The EnergyPlus pre-processor ExpandObjects reads these templates and expands them into a full, detailed set of standard objects:
+```idf
+PlantLoop,
+Branch,
+Pump:VariableSpeed,
+DistrictHeating:Water,
+PlantEquipmentList,
+PlantEquipmentOperationSchemes,
+...
+```
+
 # Required at run time
 
  - Weather file (EPW): EPW_PATH (absolute path you pass to the CLI).
