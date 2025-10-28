@@ -10,7 +10,7 @@ layout: post
 ---
 
 
-## structure
+## system
 ### blockMeshDict
 __blockMeshDict__ defines the configuration for generating mesh.
 
@@ -20,9 +20,6 @@ usually include these items:
  - vertices
  - blocks
  - boundary: boundary conditions for all geometric components
-
-### PhysicalProperties
-__PhysicalProperteis__ descirbes the physical properties such as Reynolds number
 
 ### controlDict
 __controlDict__ defines the control of time and reading and writing of the solution data. A typical template is like this:
@@ -77,6 +74,16 @@ runTimeModifiable true;
 
 // ************************************************************************* //
 ```
+
+### fvSchemes
+The user specifies the choice of finite volume discretisation schemes in the fvSchemes dictionary.
+
+### fvSolution
+The specification of the linear equation solvers and tolerances and other algorithm controls is made in the fvSolution dictionary.
+
+## constant
+### PhysicalProperties
+__PhysicalProperteis__ descirbes the physical properties such as Reynolds number
 
 
 ## Some concepts
