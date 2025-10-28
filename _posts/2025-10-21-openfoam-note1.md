@@ -18,7 +18,7 @@ usually include these items:
  - FoamFile: metadata
  - scale
  - vertices
- - blocks
+ - blocks: hex, resolution, ...
  - boundary: boundary conditions for all geometric components
 
 ### controlDict
@@ -85,6 +85,9 @@ The specification of the linear equation solvers and tolerances and other algori
 ### PhysicalProperties
 __PhysicalProperteis__ descirbes the physical properties such as Reynolds number
 
+## 0 (initial values)
+
+## viewer
 
 ## Some concepts
 ### Patch
