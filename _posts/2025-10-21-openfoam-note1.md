@@ -81,15 +81,7 @@ The user specifies the choice of finite volume discretisation schemes in the fvS
 ### fvSolution
 The specification of the linear equation solvers and tolerances and other algorithm controls is made in the fvSolution dictionary.
 
-## constant
-### PhysicalProperties
-__PhysicalProperteis__ descirbes the physical properties such as Reynolds number
-
-## 0 (initial values)
-
-## viewer
-
-## Mesh generation
+### SnapyHexMesh
 In Openfoam, mesh generation workflow is like this:
 ```
 blockMesh or external mesher
@@ -109,8 +101,115 @@ blockMesh or external mesher
    │  OpenFOAM mesh │
    └────────────────┘
 ```
-### SnapyHexMesh
 refer to this (doc)[https://www.wolfdynamics.com/wiki/meshing_OF_SHM.pdf].
+
+For snappyHexDict
+
+
+Here is a template snappyHexDict file:
+
+```
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+
+castellatedMesh  true;
+snap             true;
+addLayers        false;
+
+mergeTolerance   1e-6;
+mergePatchFaces  yes;
+keepPatches      yes;
+
+geometry
+{
+    house
+    {
+        type triSurfaceMesh;
+        file "house.stl";
+    }
+}
+castellatedMeshControls
+{
+    maxLocalCells        1000000;
+    maxGlobalCells       2000000;
+    minRefinementCells   0;
+    nCellsBetweenLevels  2;
+    resolveFeatureAngle  30;
+    allowFreeStandingZoneFaces true;
+    maxLoadUnbalance     0.10;
+    features ();
+
+    refinementSurfaces
+    {
+        house
+        {
+            level (1 1);
+            patchInfo { type wall; }
+            regions
+            {
+                ceiling     { level (1 1); patchInfo { type wall; } }
+                floor       { level (1 1); patchInfo { type wall; } }
+                walls_side  { level (1 1); patchInfo { type wall; } }
+            }
+        }
+    }
+    refinementRegions {}
+
+    locationInMesh (40.119041442871094 2.6096878051757812 -74.18577246665954);
+}
+
+snapControls
+{
+    nSmoothPatch 5;
+    tolerance 2.0;
+    nSolveIter 30;
+    nRelaxIter 5;
+}
+
+addLayersControls
+{
+    relativeSizes true;
+    layers ();
+}
+
+meshQualityControls
+{
+    maxNonOrtho          65;
+    maxBoundarySkewness  20;
+    maxInternalSkewness  4;
+    maxConcave           80;
+    minVol               1e-13;
+    minTetQuality        1e-9;
+    minArea              -1;
+    minTwist             0.02;
+    minDeterminant       0.001;
+    minFaceWeight        0.02;
+    minVolRatio          0.01;
+    minTriangleTwist     -1;
+    nSmoothScale         4;
+    errorReduction       0.75;
+    relaxed { maxNonOrtho 75; }
+}
+```
+
+
+## constant
+### PhysicalProperties
+__PhysicalProperteis__ descirbes the physical properties such as Reynolds number
+
+## 0 (initial values)
+store intial values for pressure, temperature, velocity,...
+
+## viewer
+paraFoam
+
+
+
 
 ## Some concepts
 ### Patch
