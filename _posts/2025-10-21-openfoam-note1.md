@@ -103,7 +103,11 @@ blockMesh or external mesher
 ```
 refer to this (doc)[https://www.wolfdynamics.com/wiki/meshing_OF_SHM.pdf].
 
-For snappyHexDict
+A snappyHexDict usually contains:
+ - geometry: store info about stl
+ - castellatedMeshControls: config about mesh generation
+ - snapControls
+ - MeshQualityControls
 
 
 Here is a template snappyHexDict file:
