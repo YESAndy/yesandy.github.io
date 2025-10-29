@@ -89,6 +89,29 @@ __PhysicalProperteis__ descirbes the physical properties such as Reynolds number
 
 ## viewer
 
+## Mesh generation
+In Openfoam, mesh generation workflow is like this:
+```
+blockMesh or external mesher
+           │
+           ▼
+   ┌────────────────┐
+   │ Background mesh│
+   └────────────────┘
+           │
+           ▼
+   ┌────────────────┐
+   │  snappyHexMesh │◄───────────── Geometry (STL file)
+   └────────────────┘
+           │
+           ▼
+   ┌────────────────┐
+   │  OpenFOAM mesh │
+   └────────────────┘
+```
+### SnapyHexMesh
+refer to this (doc)[https://www.wolfdynamics.com/wiki/meshing_OF_SHM.pdf].
+
 ## Some concepts
 ### Patch
 A patch is a named collection of boundary faces (the outer skin of your mesh). Each patch appears in constant/polyMesh/boundary and carries a type (e.g. patch, wall, empty, wedge, etc.) and is where you apply boundary conditions in 0/U, 0/p, etc.
