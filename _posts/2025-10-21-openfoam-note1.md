@@ -101,7 +101,7 @@ blockMesh or external mesher
    │  OpenFOAM mesh │
    └────────────────┘
 ```
-refer to this (doc)[https://www.wolfdynamics.com/wiki/meshing_OF_SHM.pdf].
+refer to this [doc](https://www.wolfdynamics.com/wiki/meshing_OF_SHM.pdf).
 
 A snappyHexDict usually contains:
  - geometry: store info about stl
