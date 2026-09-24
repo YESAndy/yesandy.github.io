@@ -40,59 +40,30 @@ Open a terminal, go to the workspace, and activate the existing ROS environment:
 ```bash
 cd /home/bob/lightsplat_ros1
 conda activate ros_env
-source devel/setup.bash
-rospack find slam
-rospack find realsense2_camera
-python -c 'import rospy, cv_bridge, cv2, numpy, senxor'
+
 ```
 
-These checks must succeed before collection. This guide assumes ROS and the
-camera dependencies are already installed; `requirements.txt` alone does
-not install ROS. If this machine uses a different ROS environment, activate
-that environment instead. These commands do not verify live camera access.
+These checks must succeed before collection. 
 
 The launch file starts the RealSense driver, SenXor publisher, collector,
 and (by default) RViz. Avoid starting a second copy of the camera drivers.
 
-#### 2. Change the experiment name
 
-In the same terminal, set the experiment name and save path:
+
+#### 2. Start collecting images
+
+In the same terminal, start the cameras and recorder:
 
 ```bash
-export EXP_NAME=thermal_rgbd_new_office1
-export DATASET="/home/bob/lightsplat_ros1/data/robotc_dataset/$EXP_NAME"
-if [ -e "$DATASET" ]; then
-  echo "Already exists: $DATASET — choose a new EXP_NAME for a new experiment."
-else
-  echo "New experiment path: $DATASET"
-fi
+roslaunch slam collect_thermal_rgbd.launch \
+  output_dir:=/home/bob/lightsplat_ros1/data/robotc_dataset/thermal_rgbd_new_office1
 ```
-
-> Change `thermal_rgbd_new_office1` according to your new experiment. For a test
-> session, change `data/robotc_dataset` to `data/robotc_dataset_test`. Keep each
-> independent experiment in its own folder.
-{: .prompt-info }
-
-The actual launch file is
-`/home/bob/lightsplat_ros1/src/slam/launch/collect_thermal_rgbd.launch`.
-Its current default `output_dir` ends in `thermal_rgbd_dough1`. Override it
-with `output_dir:="$DATASET"` as below. Alternatively, edit that argument's
-default in the launch file for the new experiment; there is no `exp_name`
-launch argument.
 
 > Make sure you change the experiment name before starting a new recording.
 > An existing folder resumes collection: the recorder appends to `manifest.csv`
 > after its highest sample index. It rewrites `dataset_info.json` but keeps an
 > existing `camera_info.json`.
 {: .prompt-warning }
-
-#### 3. Start collecting images
-
-In the same terminal, start the cameras and recorder:
-
-```bash
-roslaunch slam collect_thermal_rgbd.launch output_dir:="$DATASET"
-```
 
 You can change the collection settings with the following launch arguments:
 
@@ -122,7 +93,7 @@ synchronization. SenXor timestamps are assigned with `rospy.Time.now()` when
 the publisher creates the ROS message. RealSense depth is aligned to color;
 the thermal stream is not geometrically registered by this launch file.
 
-#### 4. Record the activities and stop collection
+#### 3. Record the activities and stop collection
 
 Look for `Saving synchronized thermal/RGB/depth data to ...` and periodic
 `Saved ... synchronized samples` messages. In another terminal, activate the
@@ -164,7 +135,7 @@ sets depth scale to `0.001` meters per unit. Thermal stores native ADC counts,
 not degrees Celsius. `camera_info.json` is written after a color CameraInfo
 message arrives and contains the RGB camera calibration, not thermal extrinsics.
 
-#### 5. Check the saved images
+#### 4. Check the saved images
 
 After collection finishes, enter the following commands to check the saved files:
 
