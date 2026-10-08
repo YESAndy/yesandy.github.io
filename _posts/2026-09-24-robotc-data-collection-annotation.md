@@ -40,7 +40,7 @@ Open a terminal, go to the workspace, and activate the existing ROS environment:
 ```bash
 cd /home/bob/lightsplat_ros1
 conda activate ros_env
-
+source ./devel/setup.bash
 ```
 
 These checks must succeed before collection. 
@@ -58,6 +58,8 @@ In the same terminal, start the cameras and recorder:
 roslaunch slam collect_thermal_rgbd.launch \
   output_dir:=/home/bob/lightsplat_ros1/data/robotc_dataset/thermal_rgbd_new_office1
 ```
+
+After finishing, press `ctrl+c`.
 
 > Make sure you change the experiment name before starting a new recording.
 > An existing folder resumes collection: the recorder appends to `manifest.csv`
