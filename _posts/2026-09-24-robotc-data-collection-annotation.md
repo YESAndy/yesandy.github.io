@@ -261,6 +261,10 @@ python scripts/annotate_rgb_sam3.py \
   --max-instances 1 --prompt-batch-size 1
 ```
 
+```bash
+python scripts/annotate_rgb_sam3.py --conf 0.7 --max-instances 1 --dataset ./data/robotc_dataset/thermal_rgbd_tong_lab_slow1/
+```
+
 Inspect `sam3_preview/overlays/` for mask quality, and inspect
 `sam3_preview/annotations.json` for category names, predicted categories, and
 scores. The overlay image does not print activity label text. `--limit 10`
