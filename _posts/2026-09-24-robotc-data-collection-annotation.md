@@ -262,7 +262,7 @@ python scripts/annotate_rgb_sam3.py \
 ```
 
 ```bash
-python scripts/annotate_rgb_sam3.py --overwrite --conf 0.7 --max-instances 1 --dataset ./data/robotc_dataset/thermal_rgbd_tong_lab_slow1/
+python scripts/annotate_rgb_sam3.py --overwrite --conf 0.7 --max-instances 1 --prompts "real person" --dataset ./data/robotc_dataset/thermal_rgbd_tong_lab_slow1/
 ```
 
 Inspect `sam3_preview/overlays/` for mask quality, and inspect
