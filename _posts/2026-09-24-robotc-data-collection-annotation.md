@@ -21,7 +21,7 @@ and a thermal image. The images share the same sample number.
 Before starting,
 
 1. Connect the RealSense and SenXor cameras.
-2. Use the workspace at `/home/bob/lightsplat_ros1`.
+2. Use the workspace at `~/lightsplat_ros1`.
 3. Choose a new experiment name and decide which activities to record.
 
 > The commands and options below were checked against the local source files
@@ -38,7 +38,7 @@ if you intend to reuse a thermal-to-RGB calibration.
 Open a terminal, go to the workspace, and activate the existing ROS environment:
 
 ```bash
-cd /home/bob/lightsplat_ros1
+cd ~/lightsplat_ros1
 conda activate ros_env
 source ./devel/setup.bash
 ```
@@ -56,7 +56,7 @@ In the same terminal, start the cameras and recorder:
 
 ```bash
 roslaunch slam collect_thermal_rgbd.launch \
-  output_dir:=/home/bob/lightsplat_ros1/data/robotc_dataset/thermal_rgbd_new_office1
+  output_dir:=~/lightsplat_ros1/data/robotc_dataset/thermal_rgbd_new_office1
 ```
 
 After finishing, press `ctrl+c`.
@@ -142,7 +142,7 @@ message arrives and contains the RGB camera calibration, not thermal extrinsics.
 #### 1. Add the activity labels
 
 Edit `DEFAULT_ACTIVITY_PROMPTS` near the top of
-`/home/bob/lightsplat_ros1/scripts/annotate_rgb_sam3.py`, or provide the complete
+`~/lightsplat_ros1/scripts/annotate_rgb_sam3.py`, or provide the complete
 desired list through `--prompts`. The current defaults are:
 
 ```python
@@ -193,13 +193,13 @@ activity recognition or manual annotation editor in this script.
 Use the existing environment with PyTorch, Ultralytics SAM3, NumPy, and OpenCV:
 
 ```bash
-cd /home/bob/lightsplat_ros1
+cd ~/lightsplat_ros1
 conda activate ros_env
 python - <<'PY'
 from pathlib import Path
 import torch
 from ultralytics.models.sam import SAM3SemanticPredictor
-assert Path('/home/bob/lightsplat_ros1/models/sam3.pt').is_file()
+assert Path('~/lightsplat_ros1/models/sam3.pt').is_file()
 print('SAM3 import/checkpoint checks passed; CUDA available:', torch.cuda.is_available())
 PY
 ```
@@ -219,7 +219,7 @@ After setting the activity labels, annotate the first ten images:
 ```bash
 python scripts/annotate_rgb_sam3.py \
   --dataset "$DATASET" \
-  --model /home/bob/lightsplat_ros1/models/sam3.pt \
+  --model ~/lightsplat_ros1/models/sam3.pt \
   --output-dir "$DATASET/sam3_preview" \
   --limit 10 \
   --conf 0.3 --iou 0.7 --imgsz 1008 \
@@ -254,7 +254,7 @@ script again without `--limit`:
 ```bash
 python scripts/annotate_rgb_sam3.py \
   --dataset "$DATASET" \
-  --model /home/bob/lightsplat_ros1/models/sam3.pt \
+  --model ~/lightsplat_ros1/models/sam3.pt \
   --conf 0.3 --iou 0.7 --imgsz 1008 \
   --max-instances 1 --prompt-batch-size 1
 ```
