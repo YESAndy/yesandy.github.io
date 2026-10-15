@@ -328,7 +328,7 @@ roslaunch slam human_approach.launch scene:=<scene_name/> exp_id:=<exp_id/>
 experiment naming:
 
 1. controlled env
- - locations_<num_people>
+ - locations_numOfpeople
  - dynamic_approach
  - dynamic_passby
 
