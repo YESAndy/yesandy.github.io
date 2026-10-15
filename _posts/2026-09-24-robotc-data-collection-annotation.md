@@ -137,41 +137,6 @@ sets depth scale to `0.001` meters per unit. Thermal stores native ADC counts,
 not degrees Celsius. `camera_info.json` is written after a color CameraInfo
 message arrives and contains the RGB camera calibration, not thermal extrinsics.
 
-#### 4. Check the saved images
-
-After collection finishes, enter the following commands to check the saved files:
-
-> Keep using the same terminal where you set `DATASET`. If you open a new
-> terminal, set `EXP_NAME` and `DATASET` again before running the commands.
-{: .prompt-info }
-
-```bash
-python - <<'PY'
-import csv
-import os
-from pathlib import Path
-
-p = Path(os.environ['DATASET'])
-with (p / 'manifest.csv').open(newline='') as stream:
-    rows = list(csv.DictReader(stream))
-assert rows, 'No samples recorded'
-ids = [row['sample'] for row in rows]
-assert len(ids) == len(set(ids)), 'Duplicate manifest sample IDs'
-for kind in ('rgb', 'depth', 'thermal'):
-    expected = {row[f'{kind}_file'] for row in rows}
-    actual = {str(f.relative_to(p)) for f in (p / kind).glob('*.png')}
-    assert expected == actual, f'{kind}: missing or extra PNG files'
-    print(f'{kind}: {len(actual)} images')
-for name in ('dataset_info.json', 'camera_info.json'):
-    assert (p / name).is_file(), f'Missing {name}'
-print(f'Complete manifest sets: {len(rows)}')
-PY
-```
-
-This checks file correspondence, not image quality. Inspect representative
-frames before annotating. Interrupted or failed writes can leave files not
-listed in the manifest; investigate a failed check before proceeding.
-
 ### Annotate the RGB images with SAM3
 
 #### 1. Add the activity labels
@@ -315,41 +280,6 @@ earlier pixels in the maps. Individual mask files retain their full masks.
 > is written at the end, and an interrupted run can leave partial outputs.
 {: .prompt-warning }
 
-#### 4. Check the annotation results
-
-```bash
-python - <<'PY'
-import json
-import os
-from collections import Counter
-from pathlib import Path
-
-p = Path(os.environ['DATASET'])
-out = p / 'sam3_annotations'
-a = json.loads((out / 'annotations.json').read_text())
-expected = {f'rgb/{f.name}' for f in (p / 'rgb').glob('*.png')}
-actual = {image['file_name'] for image in a['images']}
-assert actual == expected, 'Annotation image coverage differs from RGB files'
-for image in a['images']:
-    key = Path(image['file_name']).stem
-    for folder in ('semantic_maps', 'instance_maps'):
-        assert (out / folder / f'{key}.png').is_file()
-for annotation in a['annotations']:
-    assert (out / annotation['mask_file']).is_file()
-counts = Counter(x['category_id'] for x in a['annotations'])
-for category in a['categories']:
-    print(category['id'], category['name'], counts[category['id']])
-detected = {x['image_id'] for x in a['annotations']}
-print('Images:', len(a['images']), 'Images without predictions:', len(a['images']) - len(detected))
-PY
-```
-
-Review examples from every intended activity and frames without predictions.
-Compare predictions with the RGB frames and session notes; a confidence score
-does not establish that an activity is correct. Correct or exclude erroneous
-annotations using your chosen review workflow; this batch script has no
-interactive correction mode. Save the reviewed prompt list and command with
-the session notes.
 
 ### View the depth and thermal images
 
