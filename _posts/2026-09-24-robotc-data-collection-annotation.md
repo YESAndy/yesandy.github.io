@@ -325,6 +325,19 @@ roslaunch slam human_approach.launch scene:=<scene_name/> exp_id:=<exp_id/>
 > check the results under `./data/mission/<scene_name/>/<exp_id/>`, especially for the `interactions.csv` to see if the responses are collected or not.
 {: .prompt-info }
 
+experiment naming:
+
+1. controlled env
+ - locations_<num_people>
+ - dynamic_approach
+ - dynamic_passby
+
+2. in the wild
+ - afternoon
+ - night
+ - morning
+
+
 ## Reference
 
 - Collection launch: [collect_thermal_rgbd.launch](src/slam/launch/collect_thermal_rgbd.launch)
